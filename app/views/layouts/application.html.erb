@@ -11,8 +11,60 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="header">
+    <div class="wrapper_h">
+      <div class="logo"></div>
+      <div class="contacts">
+        <span>Связь с нами :</span><br>
+        <a href="tel:+7-964-570-85-98">+7-964-570-85-98</a>
 
-<%= yield %>
+      </div>
+      <div class="buy"></div>
+      <div class="horizontal_nav">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="slider">
+      <ul>
+        <li class="slider1"><%=image_tag(image_url('116563_1280_800.jpg'))%></li>
+        <li class="slider2"><%=image_tag(image_url('355859202.jpg'))%></li>
+        <li class="slider3"><%=image_tag(image_url('997801874.jpg'))%></li>
+        <li class="slider4"><%=image_tag(image_url('desktopvenue.com_19172_1280x960.jpg'))%></li>
+        <li class="slider5"><%=image_tag(image_url('nature-light-lake-1600x900.jpg'))%></li>
+      </ul>
+      <div class="sliding">
+        <span rel="1"></span>
+        <span rel="2"></span>
+        <span rel="3"></span>
+        <span rel="4"></span>
+        <span rel="5"></span>
+      </div>
+    </div>
+    <div class="menu_bar">
+      <div class="vertical_nav">
+        <div class="title">
+          <h3>Каталог</h3>
+        </div>
+        <div class="catalog_nav">
+          <ul>
+            <%@categories.each do |category|%>
+                <li><a href="<%= category_products_path(category) %>"><%=category.category_name%></a></li>
+            <%end%>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="catalog">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

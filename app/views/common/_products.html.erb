@@ -1,0 +1,9 @@
+<%@products.each do |product|%>
+    <div class="itemCatalog">
+      <div class="description">
+        <%=image_tag(product.image_url)%>
+        <p><%=product.title %></p>
+        <p class="price"><%=product.price %></p>
+      </div>
+    </div>
+<%end %>
