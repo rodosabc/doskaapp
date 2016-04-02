@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :products
   end
   resources :carts
+  resources :line_items
+
   get 'main/index'
   root 'main#index'
   # The priority is based upon order of creation: first created -> highest priority.
