@@ -64,6 +64,16 @@
     <div class="catalog">
       <%= yield %>
     </div>
+    <div class="cart">
+      <%if Cart.exists?(session[:cart_id])%>
+          <% @cart = Cart.find(session[:cart_id])%>
+          <% @cart.products.each do |product| %>
+              <%@line_item = LineItem.find_by_product_id(product.id)%>
+            <h1><%=product.title%></h1>
+              <p><%=@line_item.quantity%></p>
+          <%end%>
+      <%end%>
+    </div>
   </div>
 
 </body>
