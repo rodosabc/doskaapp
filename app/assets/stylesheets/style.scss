@@ -14,6 +14,7 @@ img{
   height: auto;
 }
 
+
 *{
   box-sizing: border-box;
   font-family: Roboto-Regular, serif;
@@ -102,6 +103,10 @@ img{
   max-width: 1170px;
   margin: 5px auto;
   display: flex;
+}
+
+.content-mine{
+  display: block;
 }
 
 .slider {
@@ -331,5 +336,67 @@ img{
 
 .btn-green:active{
   background: #408000;
+}
+
+.head{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.desc-blog {
+  width: 65%;
+  float: right;
+  margin: 15px;
+}
+
+.entry-meta {
+  /*border-top: 1px solid black;*/
+  /*border-bottom: 1px solid black;*/
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #66cc00;
+}
+
+.author{
+  border-right: 1px solid #808080;
+  border-left: 1px solid #808080;
+}
+
+.main-title{
+  margin: 30px;
+  float: none;
+  text-align: center;
+  width: 100%;
+}
+
+.line{
+  width: 80%;
+  margin: 5px auto;
+  height: 2px;
+  background: #b2b2b2;
+  display: block;
+}
+
+.column{
+  width: 31%;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+.column h4{
+  margin: 25px;
+}
+
+.center {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.column h4 i{
+  display: block;
+  float: left;
 }
 

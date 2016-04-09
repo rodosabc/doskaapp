@@ -1,9 +1,21 @@
- <%@products.each do |product|%>
-        <div class="itemCatalog">
-          <div class="description">
-            <%=image_tag(product.image_url)%>
-            <p><%=product.title %></p>
-            <p class="price"><%=product.price %></p>
-          </div>
-        </div>
-    <%end %>
+<%= render 'common/slider'%>
+<div class="row">
+  <div class="content content-mine">
+    <div  class="main-title"><h2>За что нас выбирают клиенты?</h2></div>
+    <span class="line"></span>
+    <div class="center">
+      <div class="column">
+        <h4><i class="fa fa-heart fa-2x"></i> ТОЛЬКО КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h4>
+        <h4><i class="fa fa-lightbulb-o fa-2x"></i> ШИРОКИЙ АССОРТИМЕНТ</h4>
+      </div>
+      <div class="column">
+        <h4><i class="fa fa-arrow-up fa-2x"></i> ВЫСОКОКЛАССНЫЕ СПЕЦИАЛИСТЫ</h4>
+        <h4><i class="fa fa-thumbs-up fa-2x"></i> НИЗКИЕ ЦЕНЫ</h4>
+      </div>
+      <div class="column">
+        <h4><i class="fa fa-clock-o fa-2x"></i> БЫСТРЫЕ СРОКИ ИЗГОТОВЛЕНИЯ</h4>
+        <h4><i class="fa fa-cogs fa-2x"></i> КАЧЕСТВЕННЫЙ СЕРВИС</h4>
+      </div>
+    </div>
+  </div>
+</div>

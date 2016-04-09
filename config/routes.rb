@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :orders
+  resources :blog_items
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :categories do
     resources :products

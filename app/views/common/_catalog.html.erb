@@ -1,20 +1,14 @@
-<div class="row">
-  <div class="content">
-
-    <div class="menu_bar">
-      <div class="vertical_nav">
-        <div class="title">
-          <h3>Каталог</h3>
-        </div>
-        <div class="catalog_nav">
-          <ul>
-            <%@categories.each do |category|%>
-                <li><a href="<%= category_products_path(category) %>"><%=category.category_name%></a></li>
-            <%end%>
-          </ul>
-        </div>
-      </div>
+<div class="menu_bar">
+  <div class="vertical_nav">
+    <div class="title">
+      <h3>Каталог</h3>
     </div>
-    <%= yield %>
+    <div class="catalog_nav">
+      <ul>
+        <%@categories.each do |category|%>
+            <li><a href="<%= category_products_path(category) %>"><%=category.category_name%></a></li>
+        <%end%>
+      </ul>
+    </div>
   </div>
 </div>

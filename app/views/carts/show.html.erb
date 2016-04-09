@@ -1,27 +1,35 @@
 <div class="row">
   <div class="content">
     <div class="cart-show">
-      <h2 class="head">Корзина</h2>
-      <div class="cart-item">
-        <a href="delete"> <i class="fa fa-times close"></i></a>
-        <div class="description-cart">
-          <div class="img"><img class="cart-img" src="img/715148-163395.png">
+      <%if @cart.products.empty?%>
+          <h1>Здесь пусто...темно...холодно...без твоих денег</h1>
+      <%else%>
+        <h2 class="head">Корзина</h2>
+        <!---->
+          <%@cart.products.each do |product|%>
+              <div class="cart-item">
+                <a href="delete"> <i class="fa fa-times close"></i></a>
+                <div class="description-cart">
+                  <div class="img">
+                    <%=image_tag(product.image_url)%>
+                  </div>
+                  <div class="desc">
+                    <p><%= product.title %></p>
+                    <p><%= product.description %></p>
+                    <p class="price"><span class="rub"><%= product.price %><i class="fa fa-rub"></i></span></p>
+                  </div>
+                </div>
+              </div>
+          <%end%>
+          <div class="all-price">
+            <p>Количество: <%=@cart.products.size %></p>
+            <p>Сумма доставки: 500</p>
+            <p>Сумма заказа: <%=@cart.total_price%></p>
           </div>
-          <div class="desc">
-            <p>Диванчик</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.</p>
-            <p class="price"><span class="rub">10000 <i class="fa fa-rub"></i></span></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="all-price">
-        <p>Количество: 1</p>
-        <p>Сумма доставки: 500</p>
-        <p>Сумма заказа: 10500</p>
-      </div>
-
-      <div class="btn btn-green">Оформить заказ</div>
+        <!---->
+        <div class="btn btn-green">Оформить заказ</div>
+        <!---->
+      <%end%>
     </div>
   </div>
 </div>

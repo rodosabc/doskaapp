@@ -71,3 +71,18 @@ CategoryProduct.create!(category_id: 1,
                         product_id: 5,)
 CategoryProduct.create!(category_id: 1,
                         product_id: 6,)
+#...
+=begin
+      t.string :title
+      t.text :text
+      t.date :date
+    add_column :blog_items, :image_url, :string
+    add_column :blog_items, :author, :string
+    add_column :blog_items, :theme, :string
+=end
+
+BlogItem.delete_all
+BlogItem.create!(id: 0,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+BlogItem.create!(id: 1,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+BlogItem.create!(id: 2,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+

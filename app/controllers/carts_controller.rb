@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     @cart.save
     end
   def show
-
+    @cart
   end
 
   def update

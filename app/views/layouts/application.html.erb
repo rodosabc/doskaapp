@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <title>Doskaapp</title>
+  <title><%= (yield :title).presence || 'Svoyadoska' %></title>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,13 +22,13 @@
 
         </div>
         <div class="buy">
-          <a href="cart.html"> <%=fa_icon('shopping-cart 4x')%><%=@quantity%></a>
+          <a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@quantity%></a>
         </div>
         <div class="horizontal_nav">
           <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Блог</a></li>
+            <li><a href="<%=main_index_path%>">Главная</a></li>
+            <li><a href="<%=category_products_path(0)%>">Каталог</a></li>
+            <li><a href="<%=blog_items_path%>">Блог</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">FAQ</a></li>
           </ul>
@@ -36,8 +36,7 @@
       </div>
     </div>
   </div>
-  <!--slider-->
-  <!--catalog-->
+  <%=yield%>
   <div class="row">
     <div class="footer">
 
