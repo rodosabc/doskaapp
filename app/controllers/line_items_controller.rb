@@ -1,19 +1,11 @@
 class LineItemsController < ApplicationController
-  
+  include CurrentCart
+  before_action :set_cart, only: [:create]
+
   def create
-      if Cart.exists?(session[:cart_id])
-        @cart = Cart.find(session[:cart_id])
-      else
-        @cart = Cart.new
-        @cart.save
-        session[:cart_id] = @cart.id
-      end
-      if LineItem.exists?(:product_id => params[:id])
-        @line_item = LineItem.find_by_product_id(params[:id])
-        @line_item.update(quantity: @line_item.quantity + 1)
-      else
-        @cart.line_items.create(product_id: params[:id], quantity: 1)
-      end
+    product = Product.find(params[:id])
+    @line_item = @cart.add_product(product.id)
+    @line_item.save
     redirect_to :back
   end
 
@@ -27,6 +19,6 @@ class LineItemsController < ApplicationController
 
   private
   def line_item_params
-    params.require(:line_item).permit(:product_id)
+    params.require(:line_item).permit(:id)
   end
 end

@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402004319) do
+ActiveRecord::Schema.define(version: 20160407234516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_items", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -37,12 +45,48 @@ ActiveRecord::Schema.define(version: 20160402004319) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "contact_items", force: :cascade do |t|
+    t.string   "title"
+    t.string   "name"
+    t.string   "adress"
+    t.string   "phone_number"
+    t.text     "other"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "faq_items", force: :cascade do |t|
+    t.string   "question"
+    t.string   "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "line_items", force: :cascade do |t|
     t.integer  "cart_id"
     t.integer  "product_id"
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "order_id"
+  end
+
+  add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
+
+  create_table "news_items", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -54,4 +98,5 @@ ActiveRecord::Schema.define(version: 20160402004319) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "line_items", "orders"
 end

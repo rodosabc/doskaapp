@@ -1,10 +1,21 @@
-<%@products.each do |product|%>
-    <div class="itemCatalog">
-      <div class="description">
-        <%=image_tag(product.image_url)%>
-        <p><%=product.title %></p>
-        <p class="price"><%=product.price %></p>
-      </div>
-      <%= button_to 'Добавить в корзину', line_items_path(:id => product.id)%>
-    </div>
-<%end %>
+<div class="catalog">
+    <%@products.each do |product|%>
+      <a href="posmotrisuka">
+        <div class="itemCatalog">
+          <div class="description">
+            <%=image_tag(product.image_url)%>
+            <p><%=product.title %></p>
+            <p class="price">
+              <span class="rub">
+                <%=product.price %>
+                <%=icon('rub')%>
+              </span>
+
+              <%= link_to 'ffffff',
+                          line_items_path(:id => product.id),method: :post %>
+            </p>
+          </div>
+        </div>
+      </a>
+    <%end %>
+</div>
