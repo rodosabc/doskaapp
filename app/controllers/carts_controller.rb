@@ -6,6 +6,9 @@ class CartsController < ApplicationController
   def create
     @cart = Cart.new(cart_params)
     @cart.save
+    end
+  def show
+
   end
 
   def update

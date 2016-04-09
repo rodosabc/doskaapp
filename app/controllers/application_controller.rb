@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def all_categories
     @categories = Category.all
   end
+
+  def line_items_quantity
+    @quantity = @cart.line_items.size
+  end
 end
