@@ -5,8 +5,6 @@ class Cart < ActiveRecord::Base
   def add_product(product_id)
 
       current_item = line_items.build(product_id: product_id)
-      current_item.quantity = 1
-
     current_item
   end
   def total_price
@@ -15,5 +13,10 @@ class Cart < ActiveRecord::Base
       price += Product.find(line_item.product_id).price
     end
     price
+  end
+
+  def products_quantity
+    quantity = products.size
+    quantity
   end
 end

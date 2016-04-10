@@ -22,7 +22,7 @@
 
         </div>
         <div class="buy">
-          <a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@quantity%></a>
+          <a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@cart.products_quantity%></a>
         </div>
         <div class="horizontal_nav">
           <ul>

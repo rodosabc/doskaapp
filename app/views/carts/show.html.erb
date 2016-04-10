@@ -8,7 +8,8 @@
         <!---->
           <%@cart.products.each do |product|%>
               <div class="cart-item">
-                <a href="delete"> <i class="fa fa-times close"></i></a>
+                <a href="#"> <i class="fa fa-times close"></i></a>
+                <%= link_to 'Destroy',line_item_path(product.id), method: :delete, data: { confirm: 'Are you sure?' } %>
                 <div class="description-cart">
                   <div class="img">
                     <%=image_tag(product.image_url)%>
@@ -27,7 +28,9 @@
             <p>Сумма заказа: <%=@cart.total_price%></p>
           </div>
         <!---->
-        <div class="btn btn-green">Оформить заказ</div>
+
+        <div class="btn btn-green"><%= link_to 'Добавить',
+                                               new_order_path%></div>
         <!---->
       <%end%>
     </div>
