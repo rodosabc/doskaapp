@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Заказ</h1>
+<p>
+  Собственно заказ №<%=@order.id%>.<br>
+
+  <table>
+    <%@line_items.each do |line_item|%>
+      <tr>
+        <td>
+          <%=line_item.product.title%>
+        </td>
+        <td>
+          <%=line_item.product.price%>
+        </td>
+      </tr>
+    <%end%>
+  </table>
+<p>Количество: <%=@line_items.size %></p>
+<p>Сумма доставки: 500</p>
+<p>Сумма заказа: <%=@total_price%></p>
+
+</p>
+<p>
+  To login to the site, just follow this link%>.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
