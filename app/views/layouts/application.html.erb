@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= (yield :title).presence || 'Svoyadoska' %></title>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -19,7 +20,6 @@
         <div class="contacts">
           <span>Связь с нами :</span><br>
           <a href="tel:+7-964-570-85-98">+7-964-570-85-98</a>
-
         </div>
         <div class="buy">
           <a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@cart.products_quantity%></a>

@@ -23,10 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_admin'
+
 gem 'font-awesome-sass', '~> 4.5.0'
+
+gem 'font-awesome-rails', '~> 4.6.1'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'paperclip', '~> 4.3.5'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

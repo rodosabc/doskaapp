@@ -1,22 +1,20 @@
 
 <div class="catalog">
     <%@products.each do |product|%>
-      <a href="posmotrisuka">
         <div class="itemCatalog">
           <div class="description">
-            <%=image_tag(product.image_url)%>
+            <%=image_tag(product.image.url)%>
             <p><%=product.title %></p>
             <p class="price">
               <span class="rub">
                 <%=product.price %>
                 <%=icon('rub')%>
               </span>
-
-              <%= link_to 'Добавить',
-                          line_items_path(:id => product.id),method: :post %>
+            <%=link_to(line_items_url(:id => product.id), html_options = {method: :post}) do %>
+                <span class="plus">Добавить <i class="fa  fa-plus"></i></span>
+            <%end%>
             </p>
           </div>
         </div>
-      </a>
     <%end %>
 </div>

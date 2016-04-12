@@ -10,37 +10,37 @@ Product.delete_all
 Product.create!(id: 0,
                 title: 'Диван "Превосходство"',
                 description:"Серия 2 Сезон 24",
-                image_url:'homer3.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/homer3.jpg"),
                 price: 10.00)
 Product.create!(id: 1,
                 title: 'Диван "Мужское Счастье"',
                 description:"Серия 3 Сезон 24",
-                image_url:'homer1.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/homer1.jpg"),
                 price: 20.00)
 Product.create!(id: 2,
                 title: 'Диван "Блаженство"',
                 description:"Серия 13 Сезон 24",
-                image_url:'homer2.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/homer2.jpg"),
                 price: 30.00)
 Product.create!(id: 3,
                 title: 'Мардж задумчива',
                 description:"Серия 3 Сезон 24",
-                image_url:'marg1.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/marg1.jpg"),
                 price: 40.00)
 Product.create!(id: 4,
                 title: 'Мардж удивлена',
                 description:"Серия 3 Сезон 24",
-                image_url:'marg2.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/marg2.jpg"),
                 price: 50.00)
 Product.create!(id: 5,
                 title: 'Мардж решает вопросы',
                 description:"Серия 13 Сезон 24",
-                image_url:'marg3.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/marg3.jpeg"),
                 price: 60.00)
 Product.create!(id: 6,
                 title: 'Мардж и Гомер',
                 description:"Серия 13 Сезон 24",
-                image_url:'marghomer.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/marghomer.jpg"),
                 price: 70.00)
 
 #...

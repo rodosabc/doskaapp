@@ -12,7 +12,7 @@
                 <%= link_to 'Destroy',line_item_path(product.id), method: :delete, data: { confirm: 'Are you sure?' } %>
                 <div class="description-cart">
                   <div class="img">
-                    <%=image_tag(product.image_url)%>
+                    <%=image_tag(product.image.url)%>
                   </div>
                   <div class="desc">
                     <p><%= product.title %></p>
@@ -24,7 +24,6 @@
           <%end%>
           <div class="all-price">
             <p>Количество: <%=@cart.products.size %></p>
-            <p>Сумма доставки: 500</p>
             <p>Сумма заказа: <%=@cart.total_price%></p>
           </div>
         <!---->
