@@ -82,7 +82,7 @@ CategoryProduct.create!(category_id: 1,
 =end
 
 BlogItem.delete_all
-BlogItem.create!(id: 0,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
-BlogItem.create!(id: 1,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
-BlogItem.create!(id: 2,title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+BlogItem.create!(id: 0,:image => File.new("#{Rails.root}/app/assets/images/homer2.jpg"),title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+BlogItem.create!(id: 1,:image => File.new("#{Rails.root}/app/assets/images/homer2.jpg"),title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
+BlogItem.create!(id: 2,:image => File.new("#{Rails.root}/app/assets/images/homer2.jpg"),title: 'Blog',text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci deserunt dolores eos, et fugit harum iure iusto maiores nemo nihil non numquam, quae reiciendis rem similique ullam. Labore, quo.',date: Date.today, image_url: 'homer1.jpg')
 
