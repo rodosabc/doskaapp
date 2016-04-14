@@ -437,6 +437,10 @@ img{
 
 }
 
+.call-menu {
+   display: none;
+}
+
 .column h4{
     display: block;
     /*margin: 25px;*/
@@ -511,3 +515,65 @@ img{
     }
 }
 
+@media screen and (max-width:600px) {
+      .contacts{
+          padding-left: 0;
+      }
+  
+      .contacts a {
+        font-size: 1.5em;
+      }
+  
+      /*.horizontal_nav ul{*/
+          /*!*display: none;*!*/
+      /*}*/
+  
+      .horizontal_nav ul li{
+          width: 80px;
+          font-size: 0.9em;
+      }
+  
+      .call-menu{
+          display: block;
+          color: white;
+          float: left;
+          margin: 5px;
+      }
+  
+      .menu_bar{
+          float: none;
+          width: 90%;
+          margin: 5px auto;
+      }
+  
+      .catalog{
+          float: none;
+          width: 95%;
+          margin: 5px auto;
+          padding-left: 7%;
+      }
+  
+      .content{
+          display: block;
+      }
+      .desc{
+          float: none;
+          width: 90%;
+      }
+  
+      .img{
+          float: none;
+          margin: 10px auto;
+          width: 90%;
+          text-align: center;
+      }
+  
+      .cart-img{
+          float: none;
+      }
+  
+      .desc-blog{
+          float: none;
+          width: 90%;
+      }
+}
