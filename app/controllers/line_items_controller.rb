@@ -7,7 +7,6 @@ class LineItemsController < ApplicationController
     product = Product.find(params[:id])
     @line_item = @cart.add_product(product.id)
     @line_item.color = params[:color]
-    @line_item.color_name = Color.find_by_color(params[:color]).title
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to :back }
