@@ -34,8 +34,10 @@
           </div>
         <!---->
 
-        <div class="btn btn-green"><%= link_to 'Оформить заказ',
-                                               new_order_path%></div>
+
+      <%=link_to( new_order_path,options = {}, html_options = {}) do%>
+              <div class="btn btn-green">Оформить заказ</div>
+          <%end%>
         <!---->
       <%end%>
     </div>
