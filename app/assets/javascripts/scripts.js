@@ -3,9 +3,14 @@ $(document).ready(function(){
         autoplay: 4000
     });
 
-    $('input[value="Добавить"]').click(function(){
+    $('.plus').each(function(index){
+        $(this).parent().attr('onclick', 'javascript:void(null)');
+    });
+
+    $('.plus').click(function(){
         var form = $(this).parent();
         var req = form.serialize();
+
 
         $().ajax({
             type: 'POST',
@@ -24,5 +29,6 @@ $(document).ready(function(){
         return false;
     })
 })
+
 
 
