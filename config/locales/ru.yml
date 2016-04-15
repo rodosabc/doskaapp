@@ -3,7 +3,71 @@
 # Не забудьте добавить переводы названия модели (в т.ч. мн. ч.) и - опционально - атрибутов.
 # Некоторые переводы, где нужны склонения, видоизменены, тем не менее, имхо,
 # это не повлияло на удобство интерфейса
+
+
 ru:
+  activerecord:
+        models:
+          cart:
+            one: Корзина
+            few: Корзины
+            many: Корзины
+            other: Корзины
+          category:
+            one: Категория
+            few: Категории
+            many: Категории
+            other: Категории
+          color:
+            one: Цвет
+            few: Цвета
+            many: Цвета
+            other: Цвета
+
+          product:
+            one: Товар
+            few: Товары
+            many: Товары
+            other: Товары
+          order:
+            one: Заказ
+            few: Заказы
+            many: Заказы
+            other: Заказы
+        attributes:
+          cart:
+            products: Товары
+            line_items: Товарные позиции
+            created_at: Создано
+            updated_at: Обновлено
+          category:
+            category_name: Название
+            description: Описание
+            products: Товары
+            created_at: Создано
+            updated_at: Обновлено
+          color:
+             color: Цвет
+             title: Название
+          product:
+            title: Название
+            description: Описание
+            price: Цена
+            image: Изображение
+            material: Материалы
+            size: Размеры
+            category: Категории
+            color: Цвета
+            created_at: Создано
+            updated_at: Обновлено
+          order:
+            name: Имя
+            email: Электронная почта
+            phone_number: Номер телефона
+            line_items: Товарные позиции
+            created_at: Создано
+            updated_at: Обновлено
+
   admin:
     js:
       true: 'True'
