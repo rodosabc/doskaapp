@@ -46,11 +46,11 @@ Product.create!(id: 6,
 #...
 Category.delete_all
 Category.create!(id: 0,
-                 category_name: '"Гомер"',
+                 category_name: 'Гомер',
                 description:"Эта категория Гомера!",
                 )
 Category.create!(id: 1,
-                category_name: '"Мардж"',
+                category_name: 'Мардж',
                 description:"Эта категория Марджери Симпсон!",
                 )
 #...
