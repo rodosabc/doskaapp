@@ -7,19 +7,23 @@
       <%else%>
         <h2 class="head">Корзина</h2>
         <!---->
-          <%@cart.products.each do |product|%>
+          <%@cart.line_items.each do |line_item|%>
+              <%@product = Product.find(line_item.product_id)%>
               <div class="cart-item">
-                <%=link_to(line_item_path(:id => product.id), html_options = {method: :delete}) do %>
+                <%=link_to(line_item_path(:id => line_item.product_id), html_options = {method: :delete}) do %>
                     <i class="fa fa-times close"></i>
                 <%end%>
                 <div class="description-cart">
                   <div class="img">
-                    <%=image_tag(product.image.url)%>
+                    <%=image_tag(@product.image.url)%>
                   </div>
                   <div class="desc">
-                    <p><%= product.title %></p>
-                    <p><%= product.description %></p>
-                    <p class="price"><span class="rub"><%= product.price %><i class="fa fa-rub"></i></span></p>
+                    <p><%= @product.title %></p>
+                    <p><%= @product.description %></p>
+                    <%if line_item.color != nil%>
+                      <p class="color">Цвет: <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"> </span></p>
+                        <%end%>
+                    <p class="price"><span class="rub"><%= @product.price %><i class="fa fa-rub"></i></span></p>
                   </div>
                 </div>
               </div>
