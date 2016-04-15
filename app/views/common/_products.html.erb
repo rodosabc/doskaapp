@@ -5,23 +5,26 @@
           <div class="description">
             <%=image_tag(product.image.url)%>
             <p><%=product.title %></p>
-            <table>
-              <tr>
-                <%product.colors.each do |color|%>
-                <td bgcolor="<%=color.color%>">
-                  кек
-                </td>
-                <%end%>
-              </tr>
-            </table>
+
             <p class="price">
               <span class="rub">
                 <%=product.price %>
                 <%=icon('rub')%>
               </span>
-            <%=link_to(line_items_url(:id => product.id), html_options = {method: :post},remote: true) do %>
-                <span class="plus">Добавить <i class="fa  fa-plus"></i></span>
-            <%end%>
+
+              <%= form_tag(line_items_url(:id => product.id),:method => "post")do %>
+                <table>
+                  <tr>
+                    <%product.colors.each do |color|%>
+                        <td bgcolor="<%=color.color%>">
+                          <%= radio_button_tag(:color, color.color ) %>
+                        </td>
+                    <%end%>
+                  </tr>
+                </table>
+                <%= submit_tag("добавить") %>
+            <% end %>
+
             </p>
           </div>
         </div>

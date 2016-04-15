@@ -6,6 +6,7 @@ class LineItemsController < ApplicationController
   def create
     product = Product.find(params[:id])
     @line_item = @cart.add_product(product.id)
+    @line_item.color = params[:color]
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to :back }
@@ -25,7 +26,7 @@ class LineItemsController < ApplicationController
 
   private
   def line_item_params
-    params.require(:line_item).permit(:id)
+    params.require(:line_item).permit(:id,:color)
   end
   def set_line_item
     @line_item = @cart.line_items.find_by_product_id(params[:id])

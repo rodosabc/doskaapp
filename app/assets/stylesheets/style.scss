@@ -1,8 +1,9 @@
 @font-face {
     font-family: Roboto-Regular;
     src: local("Roboto-Regular"),
-    url(Roboto-Regular.ttf);
+    url(font-path('Roboto-Regular.ttf'));
 }
+
 
 a{
     text-decoration: none;
