@@ -5,7 +5,7 @@ class Category < ActiveRecord::Base
   validates :category_name, presence: true
 
   def first_category
-    first_category = Category.all.first
+    first_category = Category.all.first!
     first_category
   end
 end

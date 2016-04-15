@@ -18,7 +18,8 @@
                     <%product.colors.each do |color|%>
                         <div>
                           <%= radio_button_tag(:color, color.color) %>
-                          <%=label_tag 'color_'.concat(color.color), color.title%>
+
+                          <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>"></label>
                         </div>
                     <%end%>
                 </div>
