@@ -13,9 +13,6 @@
               </span>
 
               <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
-                  <%if product.colors.empty? %>
-
-                  <%else%>
                     <div class="radio_buttons">
 
                     <%product.colors.each do |color|%>
@@ -25,7 +22,6 @@
                         </div>
                     <%end%>
                 </div>
-                <%end%>
                 <%= submit_tag("добавить",:class =>'plus')  %>
             <% end %>
 

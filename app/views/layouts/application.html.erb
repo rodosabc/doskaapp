@@ -28,7 +28,7 @@
         <div class="horizontal_nav">
           <ul>
             <li><a href="<%=main_index_path%>">Главная</a></li>
-            <li><a href="<%=category_products_path(0)%>">Каталог</a></li>
+            <li><a href="<%=category_products_path(Category.new.first_category.id)%>">Каталог</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">FAQ</a></li>
           </ul>

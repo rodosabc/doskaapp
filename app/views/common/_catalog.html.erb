@@ -5,9 +5,9 @@
     </div>
     <div class="catalog_nav">
       <ul>
-        <%@categories.each do |category|%>
-            <li><a href="<%= category_products_path(category) %>"><%=category.category_name%></a></li>
-        <%end%>
+          <%@categories.each do |category|%>
+              <li><a href="<%= category_products_path(category) %>"><%=category.category_name%></a></li>
+          <%end%>
       </ul>
     </div>
   </div>
