@@ -12,7 +12,7 @@
                 <%=icon('rub')%>
               </span>
 
-              <%= form_tag(line_items_url(:id => product.id),:method => "post")do %>
+              <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
                 <table>
                   <tr>
                     <%product.colors.each do |color|%>
