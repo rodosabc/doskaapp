@@ -1,1 +1,1 @@
-<a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@cart.products_quantity%></a>
+<a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><span id="count"><%=@cart.products_quantity%></span></a>

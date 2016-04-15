@@ -589,4 +589,11 @@ img{
       .slider{
           height: 300px;
       }
+      .buy{
+          position: fixed;
+        right: 1%;
+          top: 1%;
+          z-index: 20;
+          color: #808080;
+      }
 }
