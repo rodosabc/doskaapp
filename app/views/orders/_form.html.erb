@@ -12,7 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Имя'%><br>
+    <%= f.text_field :name %>
+  </div>
+    <div class="field">
+    <%= f.label :name, 'Фамилия'%><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -27,3 +31,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+

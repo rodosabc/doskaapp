@@ -385,13 +385,14 @@ img{
 }
 
 .btn {
-  margin: 15px;
-  padding: 15px;
+  margin: 10px;
+  padding: 10px;
   color: white;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   cursor: pointer;
-
+  border: none;
+  border-radius: 5px;
 }
 
 .btn-green{
@@ -675,13 +676,40 @@ img{
     color: #808080;
   }
 }
-.color {
-    font-size: 1.2em;
-}
+
 .color-cub {
-    margin-top: 10px;
-    padding-top: 10px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.color {
+  font-size: 1.2em;
+}
+
+.new_order {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field input{
+  font-size: 1.1em;
+  width: 70%;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+.field input:focus{
+  outline: none;
+  border: 1px solid #747474;
+  box-shadow: 0 0 10px cornflowerblue;
 }
