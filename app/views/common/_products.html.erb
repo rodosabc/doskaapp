@@ -13,15 +13,14 @@
               </span>
 
               <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
-                <table>
-                  <tr>
-                    <%product.colors.each do |color|%>
-                        <td bgcolor="<%=color.color%>">
-                          <%= radio_button_tag(:color, color.color ) %>
-                        </td>
-                    <%end%>
-                  </tr>
-                </table>
+                <div class="radio_buttons">
+                  <%product.colors.each do |color|%>
+                      <div>
+                        <%= radio_button_tag(:color, color.color) %>
+                        <%=label_tag color.title%>
+                      </div>
+                  <%end%>
+                </div>
                 <%= submit_tag("добавить",:class =>'plus')  %>
             <% end %>
 

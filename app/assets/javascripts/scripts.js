@@ -12,23 +12,24 @@ $(document).ready(function(){
         var req = form.serialize();
 
 
-        $().ajax({
+        $.ajax({
             type: 'POST',
             url: form.attr('action'),
             data: req,
             success: function(data) {
-                var count = $('#count').text().empty();
+                var count = $('#count').text();
+                $('#count').empty();
                 count = +count + 1;
-                $('#count').append(count);
+                $('#count').text(count);
             },
             error:  function(xhr, str){
                 alert('Возникла ошибка: ' + xhr.responseCode);
             }
         })
-
         return false;
-    })
+    });
 })
+
 
 
 
