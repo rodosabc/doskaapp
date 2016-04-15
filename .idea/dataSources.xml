@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3264447766">
+  <component name="DataSourceManagerImpl" format="xml" hash="389166387">
     <data-source source="LOCAL" name="Rails doskaapp: production" uuid="51012efb-3c8a-47df-8825-f219d394f2ac">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
