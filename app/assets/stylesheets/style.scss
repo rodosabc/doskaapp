@@ -11,7 +11,11 @@ a{
 a:hover {
   background-color: transparent;
 }
+.cart-item a:hover {
+  background-color: transparent;
+}
 .buy a:visited {color:#66cc00;}
+.cart-item a:visited {color:#66cc00;}
 
 img{
     width: 100%;
