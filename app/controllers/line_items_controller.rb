@@ -6,8 +6,12 @@ class LineItemsController < ApplicationController
   def create
     product = Product.find(params[:id])
     @line_item = @cart.add_product(product.id)
-    @line_item.save
-    redirect_to :back
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to :back }
+        format.js
+      end
+    end
   end
 
   def update

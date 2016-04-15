@@ -16,4 +16,5 @@
 //= require jquery-2.2.1.min
 //= require jquery.glide.min
 //= require scripts.js
+//= require jquery.minicolors
 //= require_tree .

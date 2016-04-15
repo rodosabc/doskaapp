@@ -1,4 +1,10 @@
+
 RailsAdmin.config do |config|
+  config.model 'Color' do
+      field :color, :color
+      field :title, :string
+  end
+
 
   require 'i18n'
   I18n.default_locale = :ru

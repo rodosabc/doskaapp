@@ -22,7 +22,7 @@
           <a href="tel:+7-964-570-85-98">+7-964-570-85-98</a>
         </div>
         <div class="buy">
-          <a href="<%=cart_path(@cart.id)%>"> <%=fa_icon('shopping-cart 4x')%><%=@cart.products_quantity%></a>
+          <%= render('common/buy') %>
         </div>
         <div class="horizontal_nav">
           <ul>
