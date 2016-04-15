@@ -56,8 +56,8 @@ ru:
             image: Изображение
             material: Материалы
             size: Размеры
-            category: Категории
-            color: Цвета
+            categories: Категории
+            colors: Цвета
             created_at: Создано
             updated_at: Обновлено
           order:
