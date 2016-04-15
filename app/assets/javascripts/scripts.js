@@ -21,6 +21,11 @@ $(document).ready(function(){
                 $('#count').empty();
                 count = +count + 1;
                 $('#count').text(count);
+                $('body').append('<div class="add"><p>Добавлено</p></div>');
+                setTimeout(function(){
+                    $('.add').remove()
+                },500);
+
             },
             error:  function(xhr, str){
                 alert('Возникла ошибка: ' + xhr.responseCode);
@@ -29,6 +34,7 @@ $(document).ready(function(){
         return false;
     });
 })
+
 
 
 
