@@ -34,6 +34,17 @@ ru:
             few: Заказы
             many: Заказы
             other: Заказы
+          material:
+            one: Материал
+            few: Материалы
+            many: Материалы
+            other: Материалы
+          size:
+            one: Размер
+            few: Размеры
+            many: Размеры
+            other: Размеры
+
         attributes:
           cart:
             products: Товары
