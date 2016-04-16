@@ -1,5 +1,5 @@
 <div class="modalw">
-  <div>
+  <div class="img-item">
     <%=image_tag(@product.image.url)%>
   </div>
   <div>
@@ -11,49 +11,33 @@
             <div>
               <%= radio_button_tag(:color, color.color) %>
 
-              <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>"></label>
+              <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>; padding: 20px"></label>
             </div>
         <%end%>
       </div>
-      <p>Материал:</p>
-      <div class="radio_buttons">
-        <div>
-          <input type="radio" name="option" id="radio1" checked />
-          <label for="radio1" style="background: green"></label>
+        <p>Материал:</p>
+        <div class="radio_buttons">
+          <%@product.materials.each do |material|%>
+              <div>
+                <%= radio_button_tag(:material, material.name) %>
+
+                <label for="<%='material_'.concat(material.name)%>"><%=material.name%></label>
+              </div>
+          <%end%>
         </div>
-        <div>
-          <input type="radio" name="option" id="radio2" />
-          <label for="radio2" style="background: brown"></label>
+        <p>Размер:</p>
+        <div class="radio_buttons">
+          <%@product.sizes.each do |size|%>
+              <div>
+                <%= radio_button_tag(:size, size.size) %>
+
+                <label for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
+              </div>
+          <%end%>
+
         </div>
-        <div>
-          <input type="radio" name="option" id="radio3" />
-          <label for="radio3" style="background: red"></label>
-        </div>
-        <div>
-          <input type="radio" name="option" id="radio4" />
-          <label for="radio4" style="background: yellow"></label>
-        </div>
-      </div>
-      <p>Размер:</p>
-      <div class="radio_buttons">
-        <div>
-          <input type="radio" name="option" id="radio1" checked />
-          <label for="radio1" style="background: green"></label>
-        </div>
-        <div>
-          <input type="radio" name="option" id="radio2" />
-          <label for="radio2" style="background: brown"></label>
-        </div>
-        <div>
-          <input type="radio" name="option" id="radio3" />
-          <label for="radio3" style="background: red"></label>
-        </div>
-        <div>
-          <input type="radio" name="option" id="radio4" />
-          <label for="radio4" style="background: yellow"></label>
-        </div>
-      </div>
-        <%=submit_tag 'Добавить+',class: 'btn-add'%>
+        <%=submit_tag 'Добавить+',class: 'plus width-btn add-btn'%>
+
     <%end%>
   </div>
 </div>

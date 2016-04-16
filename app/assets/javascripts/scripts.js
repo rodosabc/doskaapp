@@ -1,13 +1,18 @@
 
-$(document).ready(function(){
+
+$(document).on('page:load',function(){
     $('.slider').glide({
-        autoplay: 4000
+    autoplay: 4000
     });
 
     $('.plus').each(function(index){
         $(this).parent().attr('onclick', 'javascript:void(null)');
     });
 });
+
+
+
+
 
 var ready_modal = function(){ $(document).on('click', '.modal', function(){
     $.ajax({
@@ -30,7 +35,7 @@ var ready_modal = function(){ $(document).on('click', '.modal', function(){
     });
 };
 
-var ready_buy = function(){$(document).on('click', '.btn-add', function(){
+var ready_buy = function(){$(document).on('click', '.add-btn', function(){
         var form = $(this).parent();
         var req = form.serialize();
         $.ajax({
@@ -42,7 +47,9 @@ var ready_buy = function(){$(document).on('click', '.btn-add', function(){
                 $('#count').empty();
                 count = +count + 1;
                 $('#count').text(count);
+                $('.modal-bg').remove();
                 $('body').append('<div class="add"><p>Добавлено</p></div>');
+                $('body').removeClass('scroll');
                 setTimeout(function(){
                     $('.add').remove()
                 },500);
@@ -59,13 +66,27 @@ var ready_buy = function(){$(document).on('click', '.btn-add', function(){
     });
 };
 
-$(document).on('click', '#close', function() {
+var ready_del = function(){$(document).on('click', '#close', function() {
     $('body').removeClass('scroll');
     $('.modal-bg').remove();
 });
 
-/*$(document).ready(ready_buy());*/
+$(document).on('click', '.modal-bg', function(event) {
+    $('body').removeClass('scroll');
+    $('.modal-bg').remove();
+    //event.stopPropagation();
+});
+};
+
+$(document).on('click', '.window', function(event) {
+    event.stopPropagation();
+});
+
+
+$(document).on('page:load', ready_del());
+
+
 $(document).on('page:load', ready_buy());
 
-/*$(document).ready(ready_modal());*/
+
 $(document).on('page:load', ready_modal());
