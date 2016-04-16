@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415041143) do
+ActiveRecord::Schema.define(version: 20160416124942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,21 @@ ActiveRecord::Schema.define(version: 20160415041143) do
 
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
 
+  create_table "materials", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "materials_products", id: false, force: :cascade do |t|
+    t.integer "material_id"
+    t.integer "product_id"
+  end
+
+  add_index "materials_products", ["material_id"], name: "index_materials_products_on_material_id", using: :btree
+  add_index "materials_products", ["product_id"], name: "index_materials_products_on_product_id", using: :btree
+
   create_table "orders", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -82,9 +97,22 @@ ActiveRecord::Schema.define(version: 20160415041143) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "material"
-    t.string   "size"
   end
+
+  create_table "sizes", force: :cascade do |t|
+    t.string   "size"
+    t.decimal  "overpay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sizes_products", id: false, force: :cascade do |t|
+    t.integer "size_id"
+    t.integer "product_id"
+  end
+
+  add_index "sizes_products", ["product_id"], name: "index_sizes_products_on_product_id", using: :btree
+  add_index "sizes_products", ["size_id"], name: "index_sizes_products_on_size_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
