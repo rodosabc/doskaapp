@@ -1,18 +1,15 @@
 
-
-$(document).on('page:load',function(){
+var ready_different = function(){
     $('.slider').glide({
-    autoplay: 4000
+        autoplay: 4000
     });
 
     $('.plus').each(function(index){
         $(this).parent().attr('onclick', 'javascript:void(null)');
     });
-});
+};
 
-
-
-
+$(document).on('page:load',ready_different());
 
 var ready_modal = function(){ $(document).on('click', '.modal', function(){
     $.ajax({
@@ -33,6 +30,26 @@ var ready_modal = function(){ $(document).on('click', '.modal', function(){
     });
     return false;
     });
+};
+
+var ready_dlt = function(){ $(document).on('click', '.dlt', function(){
+    var del = $(this).parent();
+    $.ajax({
+        type: 'POST',
+        url: $(this).attr('href'),
+        data: { _method: 'DELETE'},
+        success: function(data) {
+           del.remove();
+        },
+        error:  function(xhr, str){
+            $('body').append('<div class="add"><p>Ошибка </p></div>');
+            setTimeout(function(){
+                $('.add').remove()
+            },500);
+        }
+    });
+    return false;
+});
 };
 
 var ready_buy = function(){$(document).on('click', '.add-btn', function(){
@@ -75,18 +92,17 @@ $(document).on('click', '.modal-bg', function(event) {
     $('body').removeClass('scroll');
     $('.modal-bg').remove();
     //event.stopPropagation();
-});
-};
+});}
 
 $(document).on('click', '.window', function(event) {
     event.stopPropagation();
 });
 
-
-$(document).on('page:load', ready_del());
-
-
 $(document).on('page:load', ready_buy());
 
-
 $(document).on('page:load', ready_modal());
+
+$(document).on('page:load', ready_dlt());
+
+
+

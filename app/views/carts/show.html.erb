@@ -10,7 +10,7 @@
           <%@cart.line_items.each do |line_item|%>
               <%@product = Product.find(line_item.product_id)%>
               <div class="cart-item">
-                <%=link_to(line_item_path(:id => line_item.product_id), html_options = {method: :delete}) do %>
+                <%=link_to(line_item_path(:id => line_item.product_id), html_options = {method: :delete, class:"dlt",:remote => true}) do %>
                     <i class="fa fa-times close"></i>
                 <%end%>
                 <div class="description-cart">
