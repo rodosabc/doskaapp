@@ -1,13 +1,20 @@
 class ProductsController < ApplicationController
 
   before_action :all_categories, :all_products
+  before_action :set_product, only:[:show]
+
   def index
     @category = Category.find(params[:category_id])
     @products = @category.products
   end
+
   def create
     @product = Product.new(product_params)
     @product.save
+  end
+
+  def show
+
   end
 
   def update
@@ -29,5 +36,8 @@ class ProductsController < ApplicationController
 
   def all_categories
     @categories = Category.all
+  end
+  def set_product
+    @product = Product.find(params[:id])
   end
 end

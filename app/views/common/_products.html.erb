@@ -9,11 +9,11 @@
             <p class="price">
               <span class="rub">
                 <%=product.price %>
-                <%=icon('rub')%>
+                <i class="fa fa-rub"></i>
               </span>
 
               <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
-                    <div class="radio_buttons">
+                <div class="radio_buttons">
 
                     <%product.colors.each do |color|%>
                         <div>
@@ -23,7 +23,15 @@
                         </div>
                     <%end%>
                 </div>
-                <%= submit_tag("добавить",:class =>'plus')  %>
+                <!--<a class="modal" href="modal.html" onclick="javascript:void(null)">
+                  <div class="plus">Добавить +</div>
+                </a>-->
+                <%= link_to product_path(product),:class => 'modal', :remote => true do%>
+                  <%=content_tag :div,'Добавить +',:class => 'plus'%>
+                <%end%>
+
+
+                <%submit_tag("добавить",:class =>'plus')  %> <!--Убери-->
             <% end %>
 
             </p>

@@ -1,0 +1,62 @@
+<div class="modalw">
+  <div>
+    <%=image_tag(@product.image.url)%>
+  </div>
+  <div>
+    <h3><%=@product.title %></h3>
+    <%= form_tag(line_items_url(:id => @product.id),:method => "post") do %>
+      <p>Цвет:</p>
+      <div class="radio_buttons">
+        <%@product.colors.each do |color|%>
+            <div>
+              <%= radio_button_tag(:color, color.color) %>
+
+              <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>"></label>
+            </div>
+        <%end%>
+      </div>
+      <p>Материал:</p>
+      <div class="radio_buttons">
+        <div>
+          <input type="radio" name="option" id="radio1" checked />
+          <label for="radio1" style="background: green"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio2" />
+          <label for="radio2" style="background: brown"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio3" />
+          <label for="radio3" style="background: red"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio4" />
+          <label for="radio4" style="background: yellow"></label>
+        </div>
+      </div>
+      <p>Размер:</p>
+      <div class="radio_buttons">
+        <div>
+          <input type="radio" name="option" id="radio1" checked />
+          <label for="radio1" style="background: green"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio2" />
+          <label for="radio2" style="background: brown"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio3" />
+          <label for="radio3" style="background: red"></label>
+        </div>
+        <div>
+          <input type="radio" name="option" id="radio4" />
+          <label for="radio4" style="background: yellow"></label>
+        </div>
+      </div>
+      <input class="plus" type="submit" name="commit" value="добавить +">
+    <%end%>
+  </div>
+</div>
+
+
+

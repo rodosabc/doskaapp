@@ -2,11 +2,9 @@
   <div class="row">
     <div class="slider">
       <ul class="slides">
-        <li class="slide"><%=image_tag(image_url('116563_1280_800.jpg'))%></li>
-        <li class="slide"><%=image_tag(image_url('355859202.jpg'))%></li>
-        <li class="slide"><%=image_tag(image_url('997801874.jpg'))%></li>
-        <li class="slide"><%=image_tag(image_url('desktopvenue.com_19172_1280x960.jpg'))%></li>
-        <li class="slide"><%=image_tag(image_url('nature-light-lake-1600x900.jpg'))%></li>
+        <%@random_ids.each do |random_id|%>
+          <li class="slide"><%=image_tag(image_url(Product.find(random_id).image))%></li>
+        <%end%>
       </ul>
     </div>
   </div>
