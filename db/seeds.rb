@@ -126,6 +126,7 @@ Product.create!(
     categories: Category.where(:category_name => 'Тумбы'))
 
 
+=begin
 Product.create!(
     title: 'Классика',
     :image => File.new("#{Rails.root}/app/assets/images/21.jpg"),
@@ -151,6 +152,7 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/25.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'))
+=end
 
 =begin
 Product.create!(
