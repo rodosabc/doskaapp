@@ -32,7 +32,7 @@ Product.create!(
     categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
     title: 'Афина Балдахин',
-    :image => File.new("#{Rails.root}/app/assets/images/4.jpg"),
+    :image => File.new("#{Rails.root}/app/assets/images/4.jpeg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
