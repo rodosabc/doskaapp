@@ -13,17 +13,16 @@ Category.create!(category_name: 'Стулья')
 Category.create!(category_name: 'Тумбы')
 Category.create!(category_name: 'Комоды',)
 #...
-=begin
 Product.delete_all
 
 Product.create!(
                 title: 'Кровать ткань белая эмаль',
-                :image => File.new("#{Rails.root}/app/assets/images/homer1.jpg"),
+                :image => 'http://svoyadoska.ru/images/komodi/1399125554_komod-klassika.jpg',
                 price: 5000 + rand(20000),
                 categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
     title: 'Нова с ящиками',
-    :image => File.new("#{Rails.root}/app/assets/images/krovat2.jpg"),
+    :image => File.new("#{Rails.root}/app/assets/images/2.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
@@ -125,10 +124,8 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/20.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'))
-=end
 
 
-=begin
 Product.create!(
     title: 'Классика',
     :image => File.new("#{Rails.root}/app/assets/images/21.jpg"),
@@ -154,10 +151,8 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/25.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'))
-=end
 
-
-Product.delete_all
+=begin
 Product.create!(
                 title: 'Диван "Мужское Счастье"',
                 description:"Серия 3 Сезон 24",
@@ -189,7 +184,7 @@ Product.create!(
                 :image => File.new("#{Rails.root}/app/assets/images/marghomer.jpg"),
                 price: 70.00
                 )
-
+=end
 
 
 #...
