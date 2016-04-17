@@ -17,7 +17,7 @@ Product.delete_all
 
 Product.create!(
                 title: 'Кровать ткань белая эмаль',
-                :image => 'http://svoyadoska.ru/images/komodi/1399125554_komod-klassika.jpg',
+                :image => File.new("#{Rails.root}/app/assets/images/1.jpg"),
                 price: 5000 + rand(20000),
                 categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
@@ -152,69 +152,3 @@ Product.create!(
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'))
 
-=begin
-Product.create!(
-                title: 'Диван "Мужское Счастье"',
-                description:"Серия 3 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/homer1.jpg"),
-                price: 20.00)
-Product.create!(
-                title: 'Диван "Блаженство"',
-                description:"Серия 13 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/homer2.jpg"),
-                price: 30.00)
-Product.create!(
-                title: 'Мардж задумчива',
-                description:"Серия 3 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/marg1.jpg"),
-                price: 40.00)
-Product.create!(
-                title: 'Мардж удивлена',
-                description:"Серия 3 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/marg2.jpg"),
-                price: 50.00)
-Product.create!(
-                title: 'Мардж решает вопросы',
-                description:"Серия 13 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/marg3.jpeg"),
-                price: 60.00)
-Product.create!(
-                title: 'Мардж и Гомер',
-                description:"Серия 13 Сезон 24",
-                :image => File.new("#{Rails.root}/app/assets/images/marghomer.jpg"),
-                price: 70.00
-                )
-=end
-
-
-#...
-
-=begin
-CategoryProduct.delete_all
-CategoryProduct.create!(category_id: 0,
-                        product_id: 0,)
-CategoryProduct.create!(category_id: 0,
-                        product_id: 1,)
-CategoryProduct.create!(category_id: 0,
-                        product_id: 2,)
-CategoryProduct.create!(category_id: 0,
-                        product_id: 6,)
-CategoryProduct.create!(category_id: 1,
-                        product_id: 3,)
-CategoryProduct.create!(category_id: 1,
-                        product_id: 4,)
-CategoryProduct.create!(category_id: 1,
-                        product_id: 5,)
-CategoryProduct.create!(category_id: 1,
-                        product_id: 6,)
-=end
-#...
-
-=begin
-      t.string :title
-      t.text :text
-      t.date :date
-    add_column :blog_items, :image_url, :string
-    add_column :blog_items, :author, :string
-    add_column :blog_items, :theme, :string
-=end

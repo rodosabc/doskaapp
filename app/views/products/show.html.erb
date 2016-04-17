@@ -19,9 +19,9 @@
         <div class="radio_buttons">
           <%@product.materials.each do |material|%>
               <div>
-                <%= radio_button_tag(:material, material.name) %>
+                <%= radio_button_tag(:material, material.id) %>
 
-                <label for="<%='material_'.concat(material.name)%>"><%=material.name%></label>
+                <label for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
               </div>
           <%end%>
         </div>
@@ -36,7 +36,9 @@
           <%end%>
 
         </div>
-        <%=submit_tag 'Добавить+',class: 'plus width-btn add-btn'%>
+        <%=submit_tag 'add',class: 'plus width-btn add-btn',:name => 'add'%>
+        <%=submit_tag 'buy'%>
+        <%= params.inspect %>
 
     <%end%>
   </div>

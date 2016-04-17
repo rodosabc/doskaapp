@@ -8,12 +8,15 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product.id)
     @line_item.color = params[:color]
     @line_item.size = params[:size]
-    @line_item.material_name = params[:material]
+    @line_item.material_name = Material.where(:id => params[:material]).name
+    @line_item.save
+    puts params.inspect
     respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to :back }
-        format.js
-      end
+        if params[:commit]=='buy'
+          format.html {redirect_to new_order_path}
+        else params[:commit]=='add'
+          format.html {redirect_to :back}
+        end
     end
   end
 
@@ -28,7 +31,7 @@ class LineItemsController < ApplicationController
 
   private
   def line_item_params
-    params.require(:line_item).permit(:id,:color,:size,:material)
+    params.require(:line_item).permit(:id,:color,:size,:material,:commit)
   end
   def set_line_item
     @line_item = @cart.line_items.find_by_product_id(params[:id])
