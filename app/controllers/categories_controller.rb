@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+  def index
+    @categories = Category.all
+  end
   def create
     @category = Category.new(category_params)
     @category.save
@@ -14,6 +17,6 @@ class CategoriesController < ApplicationController
 
   private
   def category_params
-    params.require(:category).permit(:category_name,:description)
+    params.require(:category).permit(:id,:category_name, :description)
   end
 end

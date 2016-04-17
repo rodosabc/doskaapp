@@ -1,8 +1,7 @@
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :carts, through: :line_items
-  has_many :category_products
-  has_many :categories, through: :category_products
+  has_and_belongs_to_many :categories
   has_and_belongs_to_many :colors
   has_many :sizes, dependent: :destroy
   has_many :materials, dependent: :destroy
