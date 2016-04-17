@@ -17,7 +17,7 @@ Product.delete_all
 
 Product.create!(
                 title: 'Кровать ткань белая эмаль',
-                :image => File.new("#{Rails.root}/app/assets/images/krovat.jpg"),
+                :image => File.new("#{Rails.root}/app/assets/images/homer1.jpg"),
                 price: 5000 + rand(20000),
                 categories: Category.where(:category_name => 'Кровати'))
 Product.create!(
