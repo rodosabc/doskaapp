@@ -13,6 +13,7 @@ Category.create!(category_name: 'Стулья')
 Category.create!(category_name: 'Тумбы')
 Category.create!(category_name: 'Комоды',)
 #...
+=begin
 Product.delete_all
 
 Product.create!(
@@ -124,6 +125,7 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/20.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'))
+=end
 
 
 =begin
@@ -154,7 +156,8 @@ Product.create!(
     categories: Category.where(:category_name => 'Комоды'))
 =end
 
-=begin
+
+Product.delete_all
 Product.create!(
                 title: 'Диван "Мужское Счастье"',
                 description:"Серия 3 Сезон 24",
@@ -186,7 +189,7 @@ Product.create!(
                 :image => File.new("#{Rails.root}/app/assets/images/marghomer.jpg"),
                 price: 70.00
                 )
-=end
+
 
 
 #...
