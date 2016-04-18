@@ -13,6 +13,7 @@ class LineItemsController < ApplicationController
     puts params.inspect
     respond_to do |format|
         if params[:commit]=='buy'
+          @cart.line_items =[@line_item]
           format.html {redirect_to new_order_path}
         else params[:commit]=='add'
           format.html {redirect_to :back}
