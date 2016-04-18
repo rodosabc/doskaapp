@@ -9,7 +9,7 @@
       <div class="radio_buttons">
         <%@product.colors.each do |color|%>
             <div>
-              <%= radio_button_tag(:color, color.color) %>
+              <%= radio_button_tag(:color, color.color,true) %>
 
               <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>; padding: 20px"></label>
             </div>
@@ -19,7 +19,7 @@
         <div class="radio_buttons">
           <%@product.materials.each do |material|%>
               <div>
-                <%= radio_button_tag(:material, material.id) %>
+                <%= radio_button_tag(:material, material.id,true) %>
 
                 <label for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
               </div>
@@ -29,7 +29,7 @@
         <div class="radio_buttons">
           <%@product.sizes.each do |size|%>
               <div>
-                <%= radio_button_tag(:size, size.size) %>
+                <%= radio_button_tag(:size, size.size,true) %>
 
                 <label for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
               </div>
