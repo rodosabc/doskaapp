@@ -8,14 +8,14 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product.id)
     @line_item.color = params[:color]
     @line_item.size = params[:size]
-    @line_item.material_name = Material.where(:id => params[:material]).name
+    @line_item.material_name = Material.where(:id => params[:material]).first.name
     @line_item.save
     puts params.inspect
     respond_to do |format|
-        if params[:commit]=='buy'
+        if params[:commit]=='Купить'
           @cart.line_items =[@line_item]
           format.html {redirect_to new_order_path}
-        else params[:commit]=='add'
+        else params[:commit]=='Добавить'
           format.html {redirect_to :back}
         end
     end

@@ -320,6 +320,7 @@ img{
   font-size: 1.0em;
 }
 
+
 .plus:hover{
   background: #4d9900;
   border: none;
@@ -333,6 +334,28 @@ img{
   border: none;
   box-shadow: none;
   outline: none;
+}
+
+.one_click_buy{
+  text-align: center;
+  display: block;
+  width: 100%;
+  float: right;
+  color: white;
+  background: #e2a31c;
+  margin-right: 5px;
+  padding: 10px;
+  transition: background 0.1s 0.1s ease;
+  border: none;
+  font-size: 1.0em;
+}
+
+.one_click_buy:hover{
+  background: #c1891b;
+}
+
+.one_click_buy:active{
+  background: #a76f1f;
 }
 
 .rub {

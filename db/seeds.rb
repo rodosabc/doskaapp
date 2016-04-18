@@ -26,6 +26,28 @@ Color.create!(color: '1cd6b1',title: 'Лазурь' )
 Color.create!(color: '25d61c',title: 'Зелёное яблоко' )
 
 #...
+Material.delete_all
+Material.create!(name: 'Берёза',price: 3001 )
+Material.create!(name: 'Дуб',price: 4001 )
+Material.create!(name: 'Ясень',price: 5001 )
+Material.create!(name: 'Тополь',price: 6001 )
+Material.create!(name: 'Пальма',price: 7001 )
+Material.create!(name: 'Тёмное дерево',price: 8001 )
+Material.create!(name: 'Тёмная материя',price: 9001 )
+#...
+
+#...
+Size.delete_all
+Size.create!(size: '1x2',overpay: 3000 )
+Size.create!(size: '2x3',overpay: 4000 )
+Size.create!(size: '3x4',overpay: 5000 )
+Size.create!(size: '4x3',overpay: 6000 )
+Size.create!(size: '5x3',overpay: 7000 )
+Size.create!(size: '5x4',overpay: 8000 )
+Size.create!(size: '10x10',overpay: 9000 )
+#...
+
+
 Product.delete_all
 
 Product.create!(
@@ -33,31 +55,41 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/1.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Нова с ящиками',
     :image => File.new("#{Rails.root}/app/assets/images/2.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Венера',
     :image => File.new("#{Rails.root}/app/assets/images/3.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Афина Балдахин',
     :image => File.new("#{Rails.root}/app/assets/images/4.jpeg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Кровать Азалия',
     :image => File.new("#{Rails.root}/app/assets/images/5.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Кровати'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 
 
 
@@ -66,31 +98,40 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/6.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Столы'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']))
 Product.create!(
     title: 'Стол №2',
     :image => File.new("#{Rails.root}/app/assets/images/7.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Столы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стол №3',
     :image => File.new("#{Rails.root}/app/assets/images/8.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Столы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стол №4',
     :image => File.new("#{Rails.root}/app/assets/images/9.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Столы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стол №5',
     :image => File.new("#{Rails.root}/app/assets/images/10.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Столы'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 
 
 
@@ -99,31 +140,41 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/11.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Стулья'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стул Лира №2',
     :image => File.new("#{Rails.root}/app/assets/images/12.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Стулья'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стул Лира №1',
     :image => File.new("#{Rails.root}/app/assets/images/13.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Стулья'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стул Лира №5',
     :image => File.new("#{Rails.root}/app/assets/images/14.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Стулья'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стул деревянный точеный',
     :image => File.new("#{Rails.root}/app/assets/images/15.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Стулья'),
-    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']))
+    colors: Color.where(:title => ['Кровавая Мэри','Джунгли','Болото','Лазурь','Зелёное яблоко']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 
 
 
@@ -132,31 +183,41 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/16.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Тумба для обуви большая',
     :image => File.new("#{Rails.root}/app/assets/images/17.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Тумба для обуви большая закрытая',
     :image => File.new("#{Rails.root}/app/assets/images/18.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Тумба Классика',
     :image => File.new("#{Rails.root}/app/assets/images/19.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Тумба ТВ классика',
     :image => File.new("#{Rails.root}/app/assets/images/20.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Тумбы'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 
 
 Product.create!(
@@ -164,29 +225,39 @@ Product.create!(
     :image => File.new("#{Rails.root}/app/assets/images/21.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Фараон с зеркалом',
     :image => File.new("#{Rails.root}/app/assets/images/22.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Новый',
     :image => File.new("#{Rails.root}/app/assets/images/23.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Стиль',
     :image => File.new("#{Rails.root}/app/assets/images/24.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 Product.create!(
     title: 'Обувница',
     :image => File.new("#{Rails.root}/app/assets/images/25.jpg"),
     price: 5000 + rand(20000),
     categories: Category.where(:category_name => 'Комоды'),
-    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']))
+    colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+    materials: Material.where(:name => ['Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+    sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
 
