@@ -52,7 +52,7 @@ var ready_buy = function(){$(document).on('click', '.add-btn', function(){
 
         },
         error:  function(xhr, str){
-            $('body').append('<div class="add"><p>Ошибка </p></div>');
+            $('body').append('<div class="add"><p>Ошибка!!!!!! </p></div>');
             setTimeout(function(){
                 $('.add').remove()
             },500);

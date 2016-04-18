@@ -10,7 +10,7 @@ class Cart < ActiveRecord::Base
   def total_price
     price = 0
     line_items.each do |line_item|
-      price += Product.find(line_item.product_id).price
+      price += line_item.final_price
     end
     price
   end

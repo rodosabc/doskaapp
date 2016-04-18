@@ -13,8 +13,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>4827</introspection-state-number>
-        <introspection-timestamp>2016-04-18.03:22:14.612</introspection-timestamp>
+        <introspection-state-number>5156</introspection-state-number>
+        <introspection-timestamp>2016-04-18.23:47:10.888</introspection-timestamp>
       </schema>
       <schema id="3" parent="1" name="pg_catalog">
         <object-id>11</object-id>
@@ -84,7 +84,7 @@
       </table>
       <table id="19" parent="2" name="materials">
         <object-id>53930</object-id>
-        <state-number>4811</state-number>
+        <state-number>5156</state-number>
       </table>
       <table id="20" parent="2" name="materials_products">
         <object-id>53939</object-id>
@@ -108,7 +108,7 @@
       </table>
       <table id="25" parent="2" name="sizes">
         <object-id>53973</object-id>
-        <state-number>4820</state-number>
+        <state-number>5156</state-number>
       </table>
       <table id="26" parent="2" name="sizes_products">
         <object-id>53982</object-id>
@@ -19217,19 +19217,19 @@
         <state-number>4811</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="3421" parent="19" name="price">
-        <state-number>4811</state-number>
-        <data-type>numeric</data-type>
-      </column>
-      <column id="3422" parent="19" name="created_at">
+      <column id="3421" parent="19" name="created_at">
         <state-number>4811</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="3423" parent="19" name="updated_at">
+      <column id="3422" parent="19" name="updated_at">
         <state-number>4811</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
+      </column>
+      <column id="3423" parent="19" name="overpay">
+        <state-number>5156</state-number>
+        <data-type>integer</data-type>
       </column>
       <index id="3424" parent="19" name="materials_pkey">
         <object-id>53937</object-id>
@@ -19393,19 +19393,19 @@
         <state-number>4820</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="3458" parent="25" name="overpay">
-        <state-number>4820</state-number>
-        <data-type>numeric</data-type>
-      </column>
-      <column id="3459" parent="25" name="created_at">
+      <column id="3458" parent="25" name="created_at">
         <state-number>4820</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="3460" parent="25" name="updated_at">
+      <column id="3459" parent="25" name="updated_at">
         <state-number>4820</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
+      </column>
+      <column id="3460" parent="25" name="price">
+        <state-number>5156</state-number>
+        <data-type>integer</data-type>
       </column>
       <index id="3461" parent="25" name="sizes_pkey">
         <object-id>53980</object-id>

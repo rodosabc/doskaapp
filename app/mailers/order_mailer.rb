@@ -6,7 +6,7 @@ class OrderMailer < ApplicationMailer
     @line_items = order.line_items
     @total_price = 0
     @line_items.each do |line_item|
-      @total_price += Product.find(line_item.product_id).price
+      @total_price += line_item.final_price
     end
     mail(subject: 'Welcome to My Awesome Site')
 

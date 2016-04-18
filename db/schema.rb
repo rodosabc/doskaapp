@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418002059) do
+ActiveRecord::Schema.define(version: 20160418212052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,22 +56,25 @@ ActiveRecord::Schema.define(version: 20160418002059) do
   create_table "line_items", force: :cascade do |t|
     t.integer  "cart_id"
     t.integer  "product_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "order_id"
     t.string   "color"
     t.string   "color_name"
     t.string   "material_name"
     t.string   "size"
+    t.integer  "material_overpay"
+    t.integer  "size_price"
+    t.integer  "final_price"
   end
 
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
 
   create_table "materials", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "overpay"
   end
 
   create_table "materials_products", id: false, force: :cascade do |t|
@@ -88,6 +91,7 @@ ActiveRecord::Schema.define(version: 20160418002059) do
     t.string   "phone_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "second_name"
   end
 
   create_table "products", force: :cascade do |t|
@@ -112,9 +116,9 @@ ActiveRecord::Schema.define(version: 20160418002059) do
 
   create_table "sizes", force: :cascade do |t|
     t.string   "size"
-    t.decimal  "overpay"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "price"
   end
 
   create_table "sizes_products", id: false, force: :cascade do |t|

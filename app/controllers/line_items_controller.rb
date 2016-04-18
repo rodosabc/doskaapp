@@ -5,10 +5,17 @@ class LineItemsController < ApplicationController
 
   def create
     product = Product.find(params[:id])
+    color = Color.find_by_color(params[:color])
+    size = Size.find_by_size(params[:size])
+    material = Material.find(params[:material])
     @line_item = @cart.add_product(product.id)
-    @line_item.color = params[:color]
-    @line_item.size = params[:size]
-    @line_item.material_name = Material.where(:id => params[:material]).first.name
+    @line_item.color = color.color
+    @line_item.color_name = color.title
+    @line_item.size = size.size
+    @line_item.size_price = size.price
+    @line_item.material_name = material.name
+    @line_item.material_overpay =  material.overpay
+    @line_item.final_price =  size.price + material.overpay
     @line_item.save
     puts params.inspect
     respond_to do |format|

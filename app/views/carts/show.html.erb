@@ -29,7 +29,7 @@
                     <%if line_item.size != nil%>
                       <p class="color">Размер: <%= line_item.size %></p>
                         <%end%>
-                    <p class="price"><span class="rub"><%= @product.price %><i class="fa fa-rub"></i></span></p>
+                    <p class="price"><span class="rub"><%= line_item.final_price %><i class="fa fa-rub"></i></span></p>
                   </div>
                 </div>
               </div>

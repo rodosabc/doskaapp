@@ -2,32 +2,56 @@
 <html>
 <head>
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <style type="text/css">
+    TABLE {
+      width: 300px; /* Ширина таблицы */
+      border: 1px solid black; /* Рамка вокруг таблицы */
+    }
+    TD, TH {
+      padding: 3px; /* Поля вокруг содержимого ячеек */
+    }
+    TH {
+      text-align: left; /* Выравнивание по левому краю */
+      background: black; /* Цвет фона */
+      color: white; /* Цвет текста */
+    }
+  </style>
 </head>
 <body>
-<h1>Заказ</h1>
+<h1>Новый заказ</h1>
 <p>
-  Собственно заказ №<%=@order.id%>.<br>
+  Заказ №<%=@order.id%>.<br>
 
-  <table>
+  <table >
+    <tr>
+      <th>Товар</th>
+      <th>Цвет</th>
+      <th>Материал</th>
+      <th>Наценка за материал</th>
+      <th>Размер</th>
+      <th>Цена за размер</th>
+      <th>Итоговая цена</th>
+    </tr>
     <%@line_items.each do |line_item|%>
       <tr>
-        <td>
-          <%=line_item.product.title%>
-        </td>
-        <td>
-          <%=line_item.product.price%>
-        </td>
+        <td><%=line_item.product.title%></td>
+        <td><%=line_item.color_name%></td>
+        <td><%=line_item.material_name%></td>
+        <td>+<%=line_item.material_overpay%></td>
+        <td><%=line_item.size%></td>
+        <td><%=line_item.size_price%></td>
+        <td><%=line_item.final_price%></td>
       </tr>
     <%end%>
   </table>
-<p>Количество: <%=@line_items.size %></p>
-<p>Сумма доставки: 500</p>
-<p>Сумма заказа: <%=@total_price%></p>
 
-</p>
-<p>
-  To login to the site, just follow this link%>.
-</p>
-<p>Thanks for joining and have a great day!</p>
+<p>Количество товаров: <%=@line_items.size %></p>
+<p>Сумма заказа: <%=@total_price%></p>
+<p>Сумма заказа: <%=@total_price%></p>
+<p>Заказчик: <%=@order.name%> <%=@order.second_name%></p>
+<p>Номер телефона: <%=@order.phone_number%> </p>
+<p>E-mail: <%=@order.email%></p>
+<p>Время заказа: <%=Time.now.to_formatted_s(:long)  %></p>
+
 </body>
 </html>
