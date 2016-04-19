@@ -4,8 +4,27 @@
       <h2 class="head">Оформление заказа</h2>
       <div class="cart-item">
         <%= render 'form' %>
-
       </div>
+      <h2 class="head">Содержание заказа</h2>
+        <table >
+          <tr>
+            <th>Наименование</th>
+            <th>Цена</th>
+          </tr>
+          <%@cart.line_items.each do |line_item|%>
+              <tr>
+                <td><%=line_item.product.title%></td>
+                <td><%=line_item.final_price%></td>
+              </tr>
+          <%end%>
+        </table>
+
+
+        <p>Сумма заказа: <%=@cart.total_price%></p>
+
     </div>
   </div>
 </div>
+
+
+

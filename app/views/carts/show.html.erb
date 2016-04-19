@@ -21,22 +21,21 @@
                     <p><%= @product.title %></p>
                     <p><%= @product.description %></p>
                     <%if line_item.color != nil%>
-                      <p class="color">Цвет: <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"> </span></p>
-                        <%end%>
+                      <p class="color">Цвет: <%=line_item.color_name%> <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"> </span></p>
+                    <%end%>
                     <%if line_item.material_name != nil%>
-                      <p class="color">Материал: <%= line_item.material_name %></p>
-                        <%end%>
+                      <p class="color">Материал: <%= line_item.material_name %> <%= line_item.material_overpay %> </p>
+                    <%end%>
                     <%if line_item.size != nil%>
-                      <p class="color">Размер: <%= line_item.size %></p>
-                        <%end%>
+                      <p class="color">Размер: <%= line_item.size %> <%= line_item.size_price %></p>
+                    <%end%>
                     <p class="price"><span class="rub"><%= line_item.final_price %><i class="fa fa-rub"></i></span></p>
                   </div>
                 </div>
               </div>
           <%end%>
           <div class="all-price">
-            <p>Количество: <%=@cart.products.size %></p>
-            <p>Сумма заказа: <%=@cart.total_price%></p>
+            <p class="price"><span class="rub">Итого: <%=@cart.total_price%><i class="fa fa-rub"></i></span></p>
           </div>
         <!---->
 

@@ -37,6 +37,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         OrderMailer.order_email(@order).deliver_later
+        OrderMailer.buyer_email(@order).deliver_later
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         format.html { redirect_to main_index_path, notice:

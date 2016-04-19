@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <style type="text/css">
+    TABLE {
+      width: 300px; /* Ширина таблицы */
+      border: 1px solid #2ac732; /* Рамка вокруг таблицы */
+    }
+    TD, TH {
+      padding: 3px; /* Поля вокруг содержимого ячеек */
+    }
+    TH {
+      text-align: left; /* Выравнивание по левому краю */
+      background: #2ac732; /* Цвет фона */
+      color: white; /* Цвет текста */
+    }
+  </style>
+</head>
+<body>
+<h1>Подтверждение заказа</h1>
+
+<p> Уважаемый заказчик, спасибо за заказ!</p>
+<p>Содержание заказа:</p>
+
+<table >
+  <tr>
+    <th>Товар</th>
+    <th>Цвет</th>
+    <th>Материал</th>
+    <th>Размер</th>
+    <th>Цена</th>
+  </tr>
+  <%@line_items.each do |line_item|%>
+      <tr>
+        <td><%=line_item.product.title%></td>
+        <td><%=line_item.color_name%></td>
+        <td><%=line_item.material_name%></td>
+        <td><%=line_item.size%></td>
+        <td><%=line_item.final_price%></td>
+      </tr>
+  <%end%>
+</table>
+
+<p>Количество товаров: <%=@line_items.size %></p>
+<p>Сумма заказа: <%=@total_price%></p>
+
+<p>Контакты для связи с нами: </p>
+<p>С уважением, команда SvoyaDoska.</p>
+
+</body>
+</html>

@@ -20,7 +20,7 @@
 <body>
 <h1>Новый заказ</h1>
 <p>
-  Заказ №<%=@order.id%>.<br>
+  Заказ №<%=@order.id%>.</p><br>
 
   <table >
     <tr>
@@ -46,7 +46,6 @@
   </table>
 
 <p>Количество товаров: <%=@line_items.size %></p>
-<p>Сумма заказа: <%=@total_price%></p>
 <p>Сумма заказа: <%=@total_price%></p>
 <p>Заказчик: <%=@order.name%> <%=@order.second_name%></p>
 <p>Номер телефона: <%=@order.phone_number%> </p>

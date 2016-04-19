@@ -12,6 +12,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    TABLE {
+      width: 300px; /* Ширина таблицы */
+      border: 1px solid black; /* Рамка вокруг таблицы */
+    }
+    TD, TH {
+      padding: 3px; /* Поля вокруг содержимого ячеек */
+    }
+    TH {
+      text-align: left; /* Выравнивание по левому краю */
+      background: black; /* Цвет фона */
+      color: white; /* Цвет текста */
+    }
+  </style>
 </head>
 <body>
   <div class="row">
