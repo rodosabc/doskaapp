@@ -1,4 +1,8 @@
 class Order < ActiveRecord::Base
+=begin
+  include ActiveModel::Validations
+=end
+  validates_with EmailValidator
 
   has_many :line_items, dependent: :destroy
   validates :name,presence: true
