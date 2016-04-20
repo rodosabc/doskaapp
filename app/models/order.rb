@@ -1,12 +1,14 @@
 class Order < ActiveRecord::Base
 =begin
-  include ActiveModel::Validations
-=end
+  include ActiveModel::EachValidator
   validates_with EmailValidator
+=end
 
   has_many :line_items, dependent: :destroy
   validates :name,presence: true
+=begin
   validates :email,presence: true, email:true #TODO email validation
+=end
   validates :phone_number,presence: true #TODO phone validation
 
 
