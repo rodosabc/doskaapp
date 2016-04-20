@@ -1,5 +1,5 @@
 class AddColumnsToOrders < ActiveRecord::Migration
   def change
-    add_column :orders, :second_name, :string
+    add_column :orders, :comment, :text
   end
 end

@@ -2,6 +2,7 @@ class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:create,:destroy,:update]
   before_action :set_line_item, only: [:update, :destroy]
+  skip_before_filter :verify_authenticity_token, :only => [:destroy]
 
   def create
     product = Product.find(params[:id])
@@ -34,7 +35,9 @@ class LineItemsController < ApplicationController
 
   def destroy
     @line_item.destroy
-    redirect_to :back
+    respond_to do |format|
+      format.html {redirect_to :back}
+    end
   end
 
   private

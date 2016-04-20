@@ -6,28 +6,28 @@
           <h1>Здесь пусто...темно...холодно...без твоих денег</h1>
       <%else%>
         <h2 class="head">Корзина</h2>
+
         <!---->
           <%@cart.line_items.each do |line_item|%>
               <%@product = Product.find(line_item.product_id)%>
               <div class="cart-item">
-                <%=link_to(line_item_path(:id => line_item.product_id), html_options = {method: :delete, class:"dlt",:remote => true}) do %>
-                    <i class="fa fa-times close"></i>
-                <%end%>
+
+                <i class="fa fa-times close dlt" id="<%=line_item.product_id%>"></i>
+
                 <div class="description-cart">
                   <div class="img">
-                    <%=image_tag(@product.image.url)%>
+                    <%=image_tag(@product.image.url, class:"cart-img")%>
                   </div>
                   <div class="desc">
                     <p><%= @product.title %></p>
-                    <p><%= @product.description %></p>
                     <%if line_item.color != nil%>
-                      <p class="color">Цвет: <%=line_item.color_name%> <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"> </span></p>
+                        <p class="color">Цвет: <span class="right"><%=line_item.color_name%> <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"></span> </span></p>
                     <%end%>
                     <%if line_item.material_name != nil%>
-                      <p class="color">Материал: <%= line_item.material_name %> <%= line_item.material_overpay %> </p>
+                        <p class="color">Материал: <span class="right"> <%= line_item.material_name %> <%= line_item.material_overpay %> </span></p>
                     <%end%>
                     <%if line_item.size != nil%>
-                      <p class="color">Размер: <%= line_item.size %> <%= line_item.size_price %></p>
+                      <p class="color">Размер: <span class="right"> <%= line_item.size %> <%= line_item.size_price %></span></p>
                     <%end%>
                     <p class="price"><span class="rub"><%= line_item.final_price %><i class="fa fa-rub"></i></span></p>
                   </div>

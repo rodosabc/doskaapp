@@ -27,7 +27,25 @@
     <%= f.label :phone_number %><br>
     <%= f.text_field :phone_number %>
   </div>
-  <div class="actions">
+    <div class="field">
+    <%= f.label :comment, 'Комментариии к заказу' %><br>
+    <%= f.text_area :comment %>
+  </div>
+    <h2 class="head">Содержание заказа</h2>
+    <table class="table">
+      <tbody><tr>
+        <th>Наименование</th>
+        <th>Цена</th>
+      </tr>
+      <%@cart.line_items.each do |line_item|%>
+          <tr>
+            <td><%=line_item.product.title%></td>
+            <td><%=line_item.final_price%></td>
+          </tr>
+      <%end%>
+      </tbody></table>
+    <p>Сумма заказа: <%=@cart.total_price%></p>
+    <div class="actions">
     <%= f.submit 'Создать заказ', :class => "btn btn-green" %>
   </div>
 <% end %>

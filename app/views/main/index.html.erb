@@ -1,21 +1,38 @@
 <%= render 'common/slider'%>
 <div class="row">
-  <div class="content content-mine">
-    <div  class="main-title"><h2>За что нас выбирают клиенты?</h2></div>
-    <span class="line"></span>
-    <div class="center">
-      <div class="column">
-        <h4><i class="fa fa-heart fa-2x"></i> ТОЛЬКО КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h4>
-        <h4><i class="fa fa-lightbulb-o fa-2x"></i> ШИРОКИЙ АССОРТИМЕНТ</h4>
-      </div>
-      <div class="column">
-        <h4><i class="fa fa-arrow-up fa-2x"></i> ВЫСОКОКЛАССНЫЕ СПЕЦИАЛИСТЫ</h4>
-        <h4><i class="fa fa-thumbs-up fa-2x"></i> НИЗКИЕ ЦЕНЫ</h4>
-      </div>
-      <div class="column">
-        <h4><i class="fa fa-clock-o fa-2x"></i> БЫСТРЫЕ СРОКИ ИЗГОТОВЛЕНИЯ</h4>
-        <h4><i class="fa fa-cogs fa-2x"></i> КАЧЕСТВЕННЫЙ СЕРВИС</h4>
-      </div>
+  <div class="content">
+    <div class="catalog">
+      <%if @hit_products != nil%>
+        <%@hit_products.each do |product|%>
+            <div class="itemCatalog">
+              <div class="description">
+                <%=image_tag(image_url(product.image))%>
+                <p title="<%=product.title%>"><%=truncate(product.title,:length => 20) %></p>
+
+                <p class="price">
+                <span class="rub">
+                  <%=product.price %>
+                  <i class="fa fa-rub"></i>
+                </span>
+
+                  <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
+
+                      <!--<a class="modal" href="modal.html" onclick="javascript:void(null)">
+                        <div class="plus">Добавить +</div>
+                      </a>-->
+                      <%= link_to product_path(product),:class => 'modal', :remote => true do%>
+                          <%=content_tag :div,'Добавить +',:class => 'plus'%>
+                      <%end%>
+
+
+                      <%submit_tag("добавить",:class =>'plus')  %> <!--Убери-->
+                  <% end %>
+
+                </p>
+              </div>
+            </div>
+        <%end %>
+      <%end %>
     </div>
   </div>
 </div>

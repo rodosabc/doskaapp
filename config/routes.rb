@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :line_items
 
   get 'main/index'
+  get 'main/index'
   root 'main#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

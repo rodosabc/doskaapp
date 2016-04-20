@@ -31,6 +31,26 @@ var ready_modal = function(){ $(document).on('click', '.modal', function(){
 });
 };
 
+var ready_dlt = function(){ $(document).on('click', '.dlt', function(){
+    var del = $(this).parent();
+    $.ajax({
+        type: 'POST',
+        url:'/line_items/' + $(this).attr('id'),
+        data: { _method: 'DELETE'},
+        success: function(data) {
+            del.remove();
+        },
+        error:  function(xhr, str){
+            $('body').append('<div class="add"><p>Ошибка </p></div>');
+            setTimeout(function(){
+                $('.add').remove()
+            },500);
+        }
+    });
+    return false;
+});
+};
+
 var ready_buy = function(){$(document).on('click', '.add-btn', function(){
     var form = $(this).parent();
     var req = form.serialize();
@@ -44,15 +64,15 @@ var ready_buy = function(){$(document).on('click', '.add-btn', function(){
             count = +count + 1;
             $('#count').text(count);
             $('.modal-bg').remove();
-            $('body').removeClass('scroll');
             $('body').append('<div class="add"><p>Добавлено</p></div>');
+            $('body').removeClass('scroll');
             setTimeout(function(){
                 $('.add').remove()
             },500);
 
         },
         error:  function(xhr, str){
-            $('body').append('<div class="add"><p>Ошибка!!!!!! </p></div>');
+            $('body').append('<div class="add"><p>Ошибка </p></div>');
             setTimeout(function(){
                 $('.add').remove()
             },500);
@@ -62,7 +82,7 @@ var ready_buy = function(){$(document).on('click', '.add-btn', function(){
 });
 };
 
-var ready_del = function(){$(document).on('click', '#close', function() {
+$(document).on('click', '#close', function() {
     $('body').removeClass('scroll');
     $('.modal-bg').remove();
 });
@@ -72,18 +92,13 @@ var ready_del = function(){$(document).on('click', '#close', function() {
         $('.modal-bg').remove();
         //event.stopPropagation();
     });
-};
 
 $(document).on('click', '.window', function(event) {
     event.stopPropagation();
 });
 
-
-$(document).on('page:load', ready_del());
-
 $(document).on('page:load', ready_buy());
 
 $(document).on('page:load', ready_modal());
 
-
-
+$(document).on('page:load', ready_dlt());

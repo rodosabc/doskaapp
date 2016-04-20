@@ -22,11 +22,6 @@
   .buy a:visited {color:#66cc00;}
   .cart-item a:visited {color:#66cc00;}
 
-img{
-  width: 100%;
-  height: auto;
-}
-
 
 *{
   box-sizing: border-box;
@@ -134,7 +129,7 @@ img{
   float: none;
   max-width: 1170px;
   margin: 5px auto;
-  display: flex;
+  display: block;
 }
 
 .content-mine{
@@ -320,7 +315,6 @@ img{
   font-size: 1.0em;
 }
 
-
 .plus:hover{
   background: #4d9900;
   border: none;
@@ -334,28 +328,6 @@ img{
   border: none;
   box-shadow: none;
   outline: none;
-}
-
-.one_click_buy{
-  text-align: center;
-  display: block;
-  width: 100%;
-  float: right;
-  color: white;
-  background: #e2a31c;
-  margin-right: 5px;
-  padding: 10px;
-  transition: background 0.1s 0.1s ease;
-  border: none;
-  font-size: 1.0em;
-}
-
-.one_click_buy:hover{
-  background: #c1891b;
-}
-
-.one_click_buy:active{
-  background: #a76f1f;
 }
 
 .rub {
@@ -382,30 +354,33 @@ img{
 }
 
 .cart-item{
-  display: flex;
+  display: block;
+  padding: 10px;
   width: 90%;
   margin: 10px auto;
   box-shadow: 2px 2px 10px #b2b2b2;
   position: relative;
 }
 
+/*.cart-item div{*/
+/*display: inline-block;*/
+/*}*/
+
 .cart-img {
-  float: left;
   width: 200px;
   height: 200px;
-  margin: 15px;
+  margin: 15px 30px;
 }
 
 .img {
-  width: 30%;
+  width: 40%;
   float: left;
 }
 
 .desc {
   padding-top: 30px;
-  width: 65%;
-  float: right;
   margin: 15px;
+  min-width: 60%;
 }
 
 .close{
@@ -646,12 +621,13 @@ img{
   .itemCatalog{
     width: 270px;
   }
-  .desc, .desc-blog{
-    width: 45%;
-    padding-bottom: 30px;
+  .desc{
+    width: 60%;
+    margin: 10px auto;
   }
   .img{
-    width: 45%;
+    max-width: 30%;
+    margin: 10px auto;
   }
   .column{
     width: 40%;
@@ -678,14 +654,15 @@ img{
   .contacts{
     padding-left: 15%;
   }
+
   .buy{
     position: fixed;
     right: 1%;
     top: 5px;
     z-index: 20;
   }
-}
 
+}
 
 @media screen and (max-width:600px) {
   .contacts{
@@ -732,17 +709,21 @@ img{
   .desc{
     float: none;
     width: 90%;
+    margin: 10px auto;
   }
 
   .img{
     float: none;
     margin: 10px auto;
+    display: table;
     width: 90%;
     text-align: center;
   }
 
   .cart-img{
-    float: none;
+    /*float: none;*/
+    width: 200px;
+    margin: 10px auto;
   }
 
   .desc-blog{
@@ -762,13 +743,7 @@ img{
 
 
 @media screen and (max-width:475px) {
-  .buy{
-    position: fixed;
-    right: 1%;
-    top: 5px;
-    z-index: 20;
 
-  }
 
   .buy a{
     color: #808080;
@@ -776,9 +751,9 @@ img{
 }
 
 .color-cub {
-  margin-top: 10px;
-  padding-top: 10px;
-  display: inline-block;
+  position: absolute;
+  left: -25px;
+  bottom: 3px;
   width: 20px;
   height: 20px;
 }
@@ -793,17 +768,37 @@ img{
 }
 
 .field {
+  text-align: center;
   margin: 20px 0;
 }
 
 .field input{
+  text-align: center;
   font-size: 1.1em;
-  width: 70%;
+  width: 80%;
   height: 35px;
   border: 1px solid #000;
   border-radius: 7px;
   padding: 5px 10px;
   margin: 10px;
+}
+
+.field textarea{
+  resize: none;
+  font-size: 1.1em;
+  width: 80%;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin: 10px;
+  overflow: auto;
+}
+
+.field textarea:focus{
+  outline: none;
+  border: 1px solid #747474;
+  box-shadow: 0 0 10px cornflowerblue;
 }
 
 .field input:focus{
@@ -822,6 +817,52 @@ img{
   cursor: pointer;
 }
 
-.img img{
-  margin: 10px;
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+.table tbody tr{
+  border-bottom: 1px #747474 solid;
+}
+
+.table tbody tr:first-of-type{
+  background: #dedede;
+  outline: none;
+}
+.table tbody tr th{
+  padding: 15px 10px;
+}
+
+.table tbody tr td{
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.table tbody tr td:first-of-type{
+  padding: 15px 10px;
+  text-align: left;
+}
+
+.table tbody tr th:first-of-type{
+  text-align: left;
+}
+
+.right {
+  /*display: inline-block;*/
+  /*text-align: right;*/
+  float: right;
+}
+
+.desc p{
+  margin-bottom: 15px;
+}
+
+.desc p .right{
+  position: relative;
+}
+
+.description-cart {
+  width: 100%;
 }
