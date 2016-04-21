@@ -21,17 +21,17 @@
               <div>
                 <%= radio_button_tag(:material, material.id,true) %>
 
-                <label for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
+                <label overpay="" for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
               </div>
           <%end%>
         </div>
-        <p>Размер:</p>
+        <p>Размер <span class="quest"><i class="fa fa-question-circle"></i></span>: </p>
         <div class="radio_buttons">
           <%@product.sizes.each do |size|%>
               <div>
                 <%= radio_button_tag(:size, size.size,true) %>
 
-                <label for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
+                <label price="" for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
               </div>
           <%end%>
 

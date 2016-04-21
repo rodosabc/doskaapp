@@ -10,6 +10,9 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    if @product.sizes != nil
+      @product.price = @product.sizes.minimum(:price)
+    end
     @product.save
   end
 

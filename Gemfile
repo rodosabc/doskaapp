@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'rails-i18n'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'email_validator'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 =begin
 gem 'turbolinks'

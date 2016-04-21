@@ -2,13 +2,20 @@
 <div class="catalog">
     <%@products.each do |product|%>
         <div class="itemCatalog">
+          <%if product.hit%>
+          <div class="labelsBlock">
+            <div class="label labelTOP" title="Хит продаж">
+              Хит продаж
+            </div>
+          </div>
+              <%end%>
           <div class="description">
             <%=image_tag(image_url(product.image))%>
             <p title="<%=product.title%>"><%=truncate(product.title,:length => 20) %></p>
 
             <p class="price">
               <span class="rub">
-                <%=product.price %>
+                <%=product.sizes.minimum(:price) || product.price %>
                 <i class="fa fa-rub"></i>
               </span>
 

@@ -5,6 +5,13 @@
       <%if @hit_products != nil%>
         <%@hit_products.each do |product|%>
             <div class="itemCatalog">
+              <!---->
+              <div class="labelsBlock">
+                <div class="label labelTOP" title="Хит продаж">
+                  Хит продаж
+                </div>
+              </div>
+              <!---->
               <div class="description">
                 <%=image_tag(image_url(product.image))%>
                 <p title="<%=product.title%>"><%=truncate(product.title,:length => 20) %></p>

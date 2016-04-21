@@ -102,3 +102,10 @@ $(document).on('page:load', ready_buy());
 $(document).on('page:load', ready_modal());
 
 $(document).on('page:load', ready_dlt());
+
+$(document).on('click', '.quest',
+        function(){
+                    $(this).append('<div class="resp"><p>Можно выполнить по вашим индивидуальным размерам.</p></div><div class="arrow-bottom"></div>');
+                    setTimeout(function(){$('.resp').remove(); $('.arrow-bottom').remove()}, 4000);
+            }
+    );
