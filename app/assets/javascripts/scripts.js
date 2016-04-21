@@ -72,6 +72,7 @@ var ready_buy = function(){$(document).on('click', '.add-btn', function(){
             count = +count + 1;
             $('#count').text(count);
             $('.modal-bg').remove();
+            $('.window').remove();
             $('body').append('<div class="add"><p>Добавлено</p></div>');
             $('body').removeClass('scroll');
             setTimeout(function(){
@@ -93,11 +94,13 @@ var ready_buy = function(){$(document).on('click', '.add-btn', function(){
 $(document).on('click', '#close', function() {
     $('body').removeClass('scroll');
     $('.modal-bg').remove();
+    $('.window').remove();
 });
 
     $(document).on('click', '.modal-bg', function(event) {
         $('body').removeClass('scroll');
         $('.modal-bg').remove();
+        $('.window').remove();
         //event.stopPropagation();
     });
 

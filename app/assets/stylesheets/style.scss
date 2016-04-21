@@ -642,12 +642,13 @@ img{
   z-index: 39;
   width: 60%;
   background: #ffffff;
-  margin: 100px auto;
+  margin: 50px auto;
   border: 1px black solid;
   border-radius: 7px;
   padding: 20px;
   animation: modalAdd 0.3s;
-  display: ruby;
+  display: block;
+  top: 50px;
 }
 
 .scroll{
@@ -657,9 +658,15 @@ img{
 @keyframes modalAdd {
   0%{
     transform: scale(0.2, 0.2) ;
+    ms-transform: scale(0.2, 0.2) ;
+    moz-transform: scale(0.2, 0.2) ;
+    webkit-transform: scale(0.2, 0.2) ;
   }
   100%{
     transform: scale(1, 1) ;
+    ms-transform: scale(1, 1) ;
+    moz-transform: scale(1, 1) ;
+    webkit-transform: scale(1, 1) ;
   }
 }
 
