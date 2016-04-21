@@ -280,7 +280,21 @@ img{
 .itemCatalog:hover {
   box-shadow: 0 0 5px 2px rgba(116, 116, 116, 0.5);
 }
+.itemCatalog-main {
+  position: relative;
+  display: inline-block;
+  margin: 1%;
+  font-size: 1.4em;
+  width: 22%;
+  min-height: 300px;
+  border: 2px #66cc00 solid;
+  border-radius: 3px;
+  transition: box-shadow 0.3s 0.1s ease;
+}
 
+.itemCatalog-main:hover {
+  box-shadow: 0 0 5px 2px rgba(116, 116, 116, 0.5);
+}
 
 .title{
   border-radius: 3px;
@@ -981,9 +995,6 @@ img{
     left: -70px;
     transform: rotate(-45deg);
 }
-.itemCatalog-main{
-     width: 22%;
- }
 
 .catalog-main{
      width: 100%;
