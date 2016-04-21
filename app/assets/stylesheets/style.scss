@@ -668,7 +668,7 @@ img{
     width: 330px;
   }
   .itemCatalog-main{
-          width: 31%;
+          width: 30%;
           margin: 10px;
       }
 }
@@ -708,7 +708,7 @@ img{
 
 @media screen and (max-width:727px) {
   .itemCatalog-main{
-          width: 47%;
+          width: 45%;
           margin: 10px;
       }
   .itemCatalog{
@@ -991,11 +991,23 @@ img{
 .hit {
     position: absolute;
     color: #fff;
-    top: 10px;
-    left: -70px;
+    top: 15px;
+    left: -60px;
+    font-size: 0.8em;
     transform: rotate(-45deg);
 }
 
 .catalog-main{
      width: 100%;
  }
+.hits_empty {
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 0;
+    height: 0;
+    border: 35px solid transparent;
+    border-left-color: #ffffff;
+    border-right: 0;
+    border-top: 0;
+}

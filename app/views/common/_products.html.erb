@@ -4,17 +4,20 @@
         <div class="itemCatalog">
           <%if product.hit%>
               <div class="hits">
-                 <span class="hit">HIT</span>
+                <div class="hits_empty"></div>
+                 <span class="hit" style="left:-58px">HIT</span>
               </div>
           <%end%>
           <%if product.sale%>
               <div class="hits" >
-                <span class="hit" style="left:-75px">SALE</span>
+                <div class="hits_empty"></div>
+                <span class="hit" style="left:-65px">SALE</span>
               </div>
           <%end%>
           <%if product.novelty%>
               <div class="hits">
-                <span class="hit">NEW</span>
+                <div class="hits_empty"></div>
+                <span class="hit" style="left:-63px">NEW</span>
               </div>
           <%end%>
           <div class="description">
@@ -25,7 +28,7 @@
               <span class="rub">
                 <%=product.sizes.minimum(:price) || product.price %>
                 <i class="fa fa-rub"></i>
-              </span>
+              </span></p>
 
               <%= form_tag(line_items_url(:id => product.id),:method => "post",:onclick =>"javascript:void(null)")do %>
 

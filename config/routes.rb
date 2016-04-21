@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :fuck_yous
   resources :orders
   resources :blog_items
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

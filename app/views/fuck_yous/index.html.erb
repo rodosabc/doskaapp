@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fuck Yous</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fuck yourself counter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fuck_yous.each do |fuck_you| %>
+      <tr>
+        <td><%= fuck_you.fuck_yourself_counter %></td>
+        <td><%= link_to 'Show', fuck_you %></td>
+        <td><%= link_to 'Edit', edit_fuck_you_path(fuck_you) %></td>
+        <td><%= link_to 'Destroy', fuck_you, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fuck you', new_fuck_you_path %>

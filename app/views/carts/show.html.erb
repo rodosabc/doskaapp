@@ -25,18 +25,18 @@
                     <%end%>
                     <%if line_item.material_name != nil%>
 
-                        <p class="color">Материал: <span class="right"> <%= line_item.material_name %> +<span class="rub price"><span class="material_overpay"><%= line_item.material_overpay %></span><i class="fa fa-rub"></i></span> </span></p>
+                        <p class="color">Материал: <span class="right"> <%= line_item.material_name %> +  <span class="material_overpay" > <%= line_item.material_overpay %></span>  </span></p>
                     <%end%>
                     <%if line_item.size != nil%>
-                      <p class="color">Размер: <span class="right"> <%= line_item.size %> <span class="rub price"><%= line_item.size_price %><i class="fa fa-rub"></i></span></span></p>
+                      <p class="color">Размер: <span class="right"> <%= line_item.size %></span></p>
                     <%end%>
-                    <p class="price"><span class="rub"><%= line_item.final_price %><i class="fa fa-rub"></i></span></p>
+                    <p class="price"><span class="item-price"><%= line_item.final_price %></span><span class="rub"><i class="fa fa-rub" style="font-size: 0.8em"></i></span></p>
                   </div>
                 </div>
               </div>
           <%end%>
           <div class="all-price">
-            <p class="price"><span class="rub">Итого: <%=@cart.total_price%><i class="fa fa-rub"></i></span></p>
+            <p class="price"><span class="rub">Итого: <span class="total-price"><%=@cart.total_price%></span><i class="fa fa-rub"></i></span></p>
           </div>
         <!---->
 

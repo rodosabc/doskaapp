@@ -36,7 +36,17 @@ var ready_dlt = function(){ $(document).on('click', '.dlt', function(){
         url:'/line_items/' + $(this).attr('id'),
         data: { _method: 'DELETE'},
         success: function(data) {
+            var item_price = +del.find('.item-price').text();
+            var total_price = +$('.total-price').text();
+            $('.total-price').empty().append(total_price - item_price);
             del.remove();
+            var count = $('#count').text();
+            $('#count').empty();
+            count = +count - 1;
+            $('#count').text(count);
+            if($('div').is('.cart-item') == false){
+                $('.cart-show').empty().append('<p>Корзина пуста</p>')
+            }
         },
         error:  function(xhr, str){
             $('body').append('<div class="add"><p>Ошибка </p></div>');
