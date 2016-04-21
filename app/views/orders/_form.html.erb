@@ -13,20 +13,20 @@
 
 
   <div class="field">
-    <%= f.label :name, 'Имя'%><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Имя'%><span style="color: red">*</span><br>
+    <%= f.text_field :name, class: 'error' %>
   </div>
     <div class="field">
-    <%= f.label :second_name, 'Фамилия'%><br>
-    <%= f.text_field :second_name %>
+    <%= f.label :second_name, 'Фамилия'%><span style="color: red">*</span><br>
+    <%= f.text_field :second_name, class: 'error' %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :email %><span style="color: red">*</span><br>
+    <%= f.text_field :email, class: 'error' %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
+    <%= f.label :phone_number %><span style="color: red">*</span><br>
+    <%= f.text_field :phone_number, class: 'error' %>
   </div>
     <div class="field">
     <%= f.label :comment, 'Комментариии к заказу' %><br>
@@ -50,3 +50,88 @@
     <%= f.submit 'Создать заказ', :class => "btn btn-green" %>
   </div>
 <% end %>
+<script>
+  $(document).ready(function(){
+
+    $('input#order_name, input#order_second_name, input#order_email, input#order_phone_number').unbind().blur( function(){
+
+      var id = $(this).attr('id');
+      var val = $(this).val();
+
+      switch(id)
+      {
+        case 'order_name':
+          var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+
+          if(val.length > 2 && val != '' && rv_name.test(val))
+          {
+            $(this).css('border', '2px solid #66cc00');
+            $(this).removeClass('error');
+          }
+
+          else
+          {
+            $(this).css('border', '2px solid red');
+            $(this).addClass('error');
+          }
+          break;
+
+        case 'order_second_name':
+          var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+
+          if(val.length > 2 && val != '' && rv_name.test(val))
+          {
+            $(this).css('border', '2px solid #66cc00');
+            $(this).removeClass('error');
+          }
+
+          else
+          {
+            $(this).css('border', '2px solid red');
+            $(this).addClass('error');
+          }
+          break;
+
+        case 'order_email':
+          var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+          if(val != '' && rv_email.test(val))
+          {
+            $(this).css('border', '2px solid #66cc00');
+            $(this).removeClass('error');
+          }
+          else
+          {
+            $(this).css('border', '2px solid red');
+            $(this).addClass('error');
+          }
+          break;
+
+        case 'order_phone_number':
+          var rv_email = /^([0-9-\s]{11,14})+/;
+          if(val != '' && rv_email.test(val))
+          {
+            $(this).css('border', '2px solid #66cc00');
+            $(this).removeClass('error');
+          }
+          else
+          {
+            $(this).css('border', '2px solid red');
+            $(this).addClass('error');
+          }
+          break;
+
+      };
+    });
+
+    $('form#new_order').submit(function(e) {
+
+      if($('.error').length > 0) {
+        return false
+      }
+      else{
+        e.submit();
+      }
+    });
+  });
+
+</script>
