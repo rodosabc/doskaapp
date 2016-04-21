@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="keywords" content="">
   <meta name="description" content="">
+  <% if content_for?(:head) %>
+      <%= yield(:head) %>
+  <% end %>
   <%= favicon_link_tag %>
   <title><%= (yield :title).presence || 'Svoyadoska' %></title>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">

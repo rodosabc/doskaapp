@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
         OrderMailer.buyer_email(@order).deliver_later
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to main_index_path, notice:
+        format.html { redirect_to thanks_index_path, notice:
             'Thank you for your order.' }
         format.json { render action: 'show', status: :created,
                              location: @order }
