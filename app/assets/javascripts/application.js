@@ -14,5 +14,5 @@
 //= require jquery_ujs
 
 //= require jquery.glide.min.js
-//= require scripts.js
+//= require scripts
 //= require_tree .

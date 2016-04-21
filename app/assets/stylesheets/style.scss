@@ -326,6 +326,7 @@ img{
 }
 
 .description p{
+  font-size: 0.8em;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -465,7 +466,16 @@ img{
 .btn-green:active{
   background: #408000;
 }
-
+.one_click_buy{
+    margin-right: 5px;
+    background: #ebbc08;
+}
+.one_click_buy:hover{
+    background: #c09a08;
+}
+.one_click_buy:active{
+    background: #9c7c08;
+}
 .head{
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -643,6 +653,10 @@ img{
   .itemCatalog{
     width: 330px;
   }
+  .itemCatalog-main{
+          width: 31%;
+          margin: 10px;
+      }
 }
 
 @media screen and (max-width:890px) {
@@ -655,6 +669,10 @@ img{
 }
 
 @media screen and (max-width:810px) {
+  .itemCatalog-main{
+          width: 30%;
+          margin: 10px;
+      }
   .itemCatalog{
     width: 270px;
   }
@@ -675,6 +693,10 @@ img{
 }
 
 @media screen and (max-width:727px) {
+  .itemCatalog-main{
+          width: 47%;
+          margin: 10px;
+      }
   .itemCatalog{
     width: 90%;
   }
@@ -705,6 +727,10 @@ img{
 }
 
 @media screen and (max-width:600px) {
+  .itemCatalog-main{
+          width: 90%;
+          margin: 10px;
+      }
   .contacts{
     padding-left: 0;
   }
@@ -712,10 +738,6 @@ img{
   .contacts a {
     font-size: 1.5em;
   }
-
-  /*.horizontal_nav ul{*/
-  /*!*display: none;*!*/
-  /*}*/
 
   .horizontal_nav ul li{
     width: 80px;
@@ -853,7 +875,7 @@ img{
 }
 
 .width-btn {
-  width: 150px;
+  width: 120px;
   cursor: pointer;
 }
 
@@ -959,8 +981,10 @@ img{
     left: -70px;
     transform: rotate(-45deg);
 }
-.itemCatalog-main {
-    width: 20%;
-}.catalog-main {
-    width: 100%;
-}
+.itemCatalog-main{
+     width: 22%;
+ }
+
+.catalog-main{
+     width: 100%;
+ }

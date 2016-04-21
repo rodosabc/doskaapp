@@ -5,15 +5,19 @@
   <div>
     <h3><%=@product.title %></h3>
      <span class="rub price">
-       <%=@product.sizes.minimum(:price) || @product.price %>
+       <span class="final_price">
+          <%=@product.sizes.minimum(:price) || @product.price %>
+       </span>
+
        <i class="fa fa-rub"></i>
+       <span class="final_overpay" style="color: #b2b2b2"></span>
      </span>
     <%= form_tag(line_items_url(:id => @product.id),:method => "post") do %>
       <p>Цвет:</p>
       <div class="radio_buttons">
         <%@product.colors.each do |color|%>
             <div>
-              <%= radio_button_tag(:color, color.color,true) %>
+              <%= radio_button_tag(:color, color.color,(color == @product.colors.first)) %>
 
               <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>; padding: 20px"></label>
             </div>
@@ -23,9 +27,9 @@
         <div class="radio_buttons">
           <%@product.materials.order(:overpay).each do |material|%>
               <div>
-                <%= radio_button_tag(:material, material.id,true) %>
+                <%= radio_button_tag(:material, material.id,(material == @product.materials.first)) %>
 
-                <label overpay="" for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
+                <label overpay="<%=material.overpay%>" for="<%='material_'.concat(material.id.to_s)%>"><%=material.name%></label>
               </div>
           <%end%>
         </div>
@@ -33,9 +37,9 @@
         <div class="radio_buttons">
           <%@product.sizes.order(:price).each do |size|%>
               <div>
-                <%= radio_button_tag(:size, size.size,true) %>
+                <%= radio_button_tag(:size, size.size,(size == @product.sizes.first)) %>
 
-                <label price="" for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
+                <label price="<%=size.price%>" for="<%='size_'.concat(size.size)%>"><%=size.size%></label>
               </div>
           <%end%>
 

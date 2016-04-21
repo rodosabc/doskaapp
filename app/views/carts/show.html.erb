@@ -24,10 +24,11 @@
                         <p class="color">Цвет: <span class="right"><%=line_item.color_name%> <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"></span> </span></p>
                     <%end%>
                     <%if line_item.material_name != nil%>
-                        <p class="color">Материал: <span class="right"> <%= line_item.material_name %> <%= line_item.material_overpay %> </span></p>
+
+                        <p class="color">Материал: <span class="right"> <%= line_item.material_name %> +<span class="rub price"><span class="material_overpay"><%= line_item.material_overpay %></span><i class="fa fa-rub"></i></span> </span></p>
                     <%end%>
                     <%if line_item.size != nil%>
-                      <p class="color">Размер: <span class="right"> <%= line_item.size %> <%= line_item.size_price %></span></p>
+                      <p class="color">Размер: <span class="right"> <%= line_item.size %> <span class="rub price"><%= line_item.size_price %><i class="fa fa-rub"></i></span></span></p>
                     <%end%>
                     <p class="price"><span class="rub"><%= line_item.final_price %><i class="fa fa-rub"></i></span></p>
                   </div>

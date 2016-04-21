@@ -1,14 +1,12 @@
-var ready_different = function(){
+$(document).ready(function(){
     $('.slider').glide({
         autoplay: 4000
     });
+});
 
-    $('.plus').each(function(index){
+$('.plus').each(function(index){
         $(this).parent().attr('onclick', 'javascript:void(null)');
     });
-};
-
-$(document).on('page:load',ready_different());
 
 var ready_modal = function(){ $(document).on('click', '.modal', function(){
     $.ajax({
@@ -109,3 +107,15 @@ $(document).on('click', '.quest',
                     setTimeout(function(){$('.resp').remove(); $('.arrow-bottom').remove()}, 4000);
             }
     );
+$(document).on('click', 'label', function(event) {
+    if($(this).attr('overpay')){
+        var overpay = $('.final_overpay');
+        overpay.empty();
+        overpay.append(' + ' + $(this).attr('overpay') + '<i class="fa fa-rub">');
+    }
+    else if($(this).attr('price')){
+        var overprice = $('.final_price');
+        overprice.empty()
+        overprice.append($(this).attr("price"));
+    }
+});

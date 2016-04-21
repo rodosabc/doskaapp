@@ -1,0 +1,1178 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: local("Roboto-Regular"), url("/assets/Roboto-Regular-bde8a188e37aa936b167aecc5e5a3da40262f6e51fd54c584f2cf2b6b99d96ca.ttf");
+}
+/**/
+/* line 11, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.labelsBlock .label.labelTOP {
+  background-position: 0px -110px;
+}
+
+/* line 14, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.labelsBlock .label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url("/assets/labels-cb0526d54b4698047d464697c770d5551c9ae16a2b6880d18dd9129fcfefd8b4.png") no-repeat;
+  width: 95px;
+  height: 55px;
+  padding: none;
+  text-indent: -9999px;
+}
+
+/* line 24, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+/* line 36, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+* {
+  outline: none !important;
+}
+
+/* line 39, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.labelsBlock {
+  position: relative;
+  overflow: visible;
+  z-index: 50;
+}
+
+/**/
+/* line 45, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+a {
+  text-decoration: none;
+  color: #66cc00;
+  font-size: 1.1em;
+}
+
+/* line 50, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+a:hover {
+  background-color: transparent;
+}
+
+/* line 53, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.cart-item a:hover {
+  background-color: transparent;
+}
+
+/* line 56, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.buy a:visited {
+  color: #66cc00;
+}
+
+/* line 57, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.cart-item a:visited {
+  color: #66cc00;
+}
+
+/* line 60, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+* {
+  box-sizing: border-box;
+  font-family: Roboto-Regular, serif;
+  margin: 0;
+  padding: 0;
+  /*border: 1px black solid;*/
+  -webkit-appearance: none;
+}
+
+/* line 69, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 75, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+* {
+  box-sizing: border-box;
+  font-family: Roboto-Regular, serif;
+  margin: 0;
+  padding: 0;
+  /*border: 1px black solid;*/
+}
+
+/* line 83, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.header {
+  margin-top: 40px;
+  height: 175px;
+}
+
+/* line 88, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.wrapper_h {
+  max-width: 1170px;
+  height: inherit;
+  margin: 0 auto;
+  position: relative;
+  border: 2px #66cc00 solid;
+  border-bottom: none;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 99, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.logo {
+  width: 150px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+/* line 108, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.contacts {
+  padding-top: 40px;
+  padding-left: 25%;
+  float: left;
+}
+
+/* line 115, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.contacts a {
+  font-size: 2em;
+  color: #000;
+  margin-left: 10px;
+}
+
+/* line 121, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.buy {
+  padding-top: 50px;
+  padding-right: 60px;
+  float: right;
+  color: #66cc00;
+}
+
+/* line 128, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.buy a:hover {
+  color: #4d9900;
+}
+
+/* line 132, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.horizontal_nav {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: #66cc00;
+}
+
+/* line 140, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.horizontal_nav ul li {
+  display: inline-block;
+  width: 100px;
+  margin-right: 0;
+}
+
+/* line 146, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.horizontal_nav ul li a {
+  width: 100px;
+  display: block;
+  padding: 10px;
+  color: #fff;
+  transition: background-color 0.4s 0.1s ease;
+}
+
+/* line 154, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.horizontal_nav ul li a:hover {
+  width: 100px;
+  display: block;
+  padding: 10px;
+  color: #fff;
+  background-color: #4d9900;
+}
+
+/* line 162, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.content {
+  float: none;
+  max-width: 1170px;
+  margin: 5px auto;
+  display: flex;
+}
+
+/* line 169, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.content-mine {
+  display: block;
+}
+
+/* line 173, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider {
+  position: relative;
+  max-width: 1170px;
+  height: 420px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+/* line 181, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slides {
+  height: 100%;
+  /* Simple clear fix */
+  overflow: hidden;
+  /**
+   * Prevent blinking issue
+   * Not tested. Experimental.
+   */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  /**
+   * Here is CSS transitions
+   * responsible for slider animation in modern broswers
+   */
+  -webkit-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* line 205, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slide {
+  height: 100%;
+  float: left;
+  clear: none;
+}
+
+/* line 214, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-arrow {
+  position: absolute;
+  display: block;
+  margin-bottom: -20px;
+  padding: 20px;
+}
+
+/* line 221, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-arrow--right {
+  bottom: 50%;
+  right: 30px;
+  color: white;
+  opacity: 0.6;
+}
+
+/* line 222, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-arrow--left {
+  bottom: 50%;
+  left: 30px;
+  color: white;
+  opacity: 0.6;
+}
+
+/* line 224, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-arrow--left:hover, .slider-arrow--right:hover {
+  opacity: 1;
+}
+
+/* line 228, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slides li {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 233, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+}
+
+/* line 238, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-nav__item {
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* line 249, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-nav__item:hover {
+  background: #ccc;
+}
+
+/* line 250, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.slider-nav__item--current {
+  background: #ccc;
+}
+
+/* line 251, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.menu_bar {
+  float: left;
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* line 259, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog {
+  width: 80%;
+  /*float: right;*/
+  /*margin-left: 25%;*/
+  /*padding: 0 auto;*/
+  /*padding-right: 5%;*/
+  padding-left: 2%;
+}
+
+/* line 268, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.itemCatalog {
+  position: relative;
+  display: inline-block;
+  margin: 1%;
+  font-size: 1.4em;
+  width: 31%;
+  min-height: 300px;
+  border: 2px #66cc00 solid;
+  border-radius: 3px;
+  transition: box-shadow 0.3s 0.1s ease;
+}
+
+/* line 280, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.itemCatalog:hover {
+  box-shadow: 0 0 5px 2px rgba(116, 116, 116, 0.5);
+}
+
+/* line 285, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.title {
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  background-color: #66cc00;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+/* line 294, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog_nav {
+  border-bottom: 2px #66cc00 solid;
+  border-right: 2px #66cc00 solid;
+  border-left: 2px #66cc00 solid;
+  border-radius: 3px;
+}
+
+/* line 301, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog_nav ul {
+  padding: 20px;
+  list-style-type: none;
+}
+
+/* line 306, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog_nav ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* line 311, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog_nav ul li a:hover {
+  color: #747474;
+  text-decoration: underline;
+}
+
+/* line 316, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog_nav ul li a {
+  color: black;
+}
+
+/* line 320, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.description img {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  float: none;
+  display: block;
+}
+
+/* line 328, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.description p {
+  font-size: 0.8em;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* line 334, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.price {
+  color: #66cc00;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* line 340, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.plus {
+  text-align: center;
+  display: block;
+  width: 100%;
+  float: right;
+  color: white;
+  background: #66cc00;
+  /*margin-right: 10px;*/
+  padding: 10px;
+  transition: background 0.1s 0.1s ease;
+  border: none;
+  font-size: 1.0em;
+}
+
+/* line 354, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.plus:hover {
+  background: #4d9900;
+  border: none;
+}
+
+/* line 359, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.plus:active {
+  background: #1f4b00;
+}
+
+/* line 363, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.plus:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* line 369, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.rub {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* line 374, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.footer {
+  max-width: 1170px;
+  height: 40px;
+  background: #66cc00;
+  margin: 0 auto;
+  padding-top: 3px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 383, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.row {
+  width: 100%;
+}
+
+/* line 387, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.cart-show {
+  width: 80%;
+  margin: 10px auto;
+}
+
+/* line 392, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.cart-item {
+  display: block;
+  padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+  box-shadow: 2px 2px 10px #b2b2b2;
+  position: relative;
+}
+
+/*.cart-item div{*/
+/*display: inline-block;*/
+/*}*/
+/* line 405, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.cart-img {
+  width: 200px;
+  height: 200px;
+  margin: 15px 30px;
+}
+
+/* line 411, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.img {
+  width: 40%;
+  float: left;
+}
+
+/* line 416, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.desc {
+  padding-top: 30px;
+  margin: 15px;
+  min-width: 60%;
+}
+
+/* line 422, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.close {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+  font-size: 2em;
+  opacity: 0.4;
+  transition: opacity 0.3s 0.1s ease;
+}
+
+/* line 434, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.close:hover {
+  opacity: 1;
+}
+
+/* line 438, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.all-price {
+  padding-right: 10%;
+  text-align: right;
+}
+
+/* line 443, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.all-price p {
+  margin-bottom: 10px;
+}
+
+/* line 447, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.btn {
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* line 458, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.btn-green {
+  background: #66cc00;
+}
+
+/* line 462, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.btn-green:hover {
+  background: #4d9900;
+}
+
+/* line 466, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.btn-green:active {
+  background: #408000;
+}
+
+/* line 469, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.one_click_buy {
+  margin-right: 5px;
+  background: #ebbc08;
+}
+
+/* line 473, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.one_click_buy:hover {
+  background: #c09a08;
+}
+
+/* line 476, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.one_click_buy:active {
+  background: #9c7c08;
+}
+
+/* line 479, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.head {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* line 484, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.desc-blog {
+  width: 65%;
+  float: right;
+  margin: 15px;
+}
+
+/* line 490, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.entry-meta {
+  /*border-top: 1px solid black;*/
+  /*border-bottom: 1px solid black;*/
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #66cc00;
+}
+
+/* line 500, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.author {
+  border-right: 1px solid #808080;
+  border-left: 1px solid #808080;
+}
+
+/* line 505, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.main-title {
+  margin: 30px;
+  float: none;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 512, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.line {
+  width: 80%;
+  margin: 5px auto;
+  height: 2px;
+  background: #b2b2b2;
+  display: block;
+}
+
+/* line 520, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.column {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+/* line 529, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.call-menu {
+  display: none;
+}
+
+/* line 533, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.column h4 {
+  display: block;
+  /*margin: 25px;*/
+  padding: 20px;
+}
+
+/* line 539, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.center {
+  margin: 10px auto;
+  width: 100%;
+}
+
+/* line 544, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.column h4 i {
+  display: block;
+  float: left;
+}
+
+/* line 549, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.copyright {
+  color: white;
+  font-size: 0.7em;
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* line 557, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.radio_buttons {
+  /*margin: 5px;*/
+  /*float: left;*/
+  margin: 10px;
+  width: auto;
+  text-align: center;
+  /*height: 50px;*/
+}
+
+/* line 565, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.radio_buttons div {
+  display: inline-block;
+  /*float: left;*/
+  /*margin: 10px auto;*/
+  margin-bottom: 5px;
+}
+
+/* line 571, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.radio_buttons input {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 575, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.radio_buttons label {
+  display: inline-block;
+  margin: 0 0 0 1px;
+  padding: 10px;
+  border: 1px solid #BBBBBB;
+  background: linear-gradient(to bottom, white 0%, #e5e5e5 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: box-shadow 0.2s 0.2s ease;
+  /*background: #66cc00;*/
+}
+
+/* line 587, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.radio_buttons input:checked + label {
+  background: white;
+  box-shadow: inset 0 3px 20px rgba(0, 0, 0, 0.53);
+  border: 1px rgba(0, 0, 0, 0.46) solid;
+  box-shadow: 0 0 15px 2px rgba(39, 95, 255, 0.51);
+}
+
+/* line 596, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.add {
+  position: fixed;
+  z-index: 40;
+  top: 30%;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
+  color: #cccccc;
+  background: #000000;
+  opacity: 0.5;
+  border-radius: 8px;
+}
+
+/* line 612, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.modal-bg {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* line 624, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.window {
+  clear: both;
+  position: relative;
+  cursor: default;
+  z-index: 39;
+  width: 60%;
+  background: #ffffff;
+  margin: 100px auto;
+  border: 1px black solid;
+  border-radius: 7px;
+  padding: 20px;
+  animation: modalAdd 0.3s;
+  display: ruby;
+}
+
+/* line 639, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.scroll {
+  overflow: hidden;
+}
+
+@keyframes modalAdd {
+  0% {
+    transform: scale(0.2, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@media screen and (max-width: 1001px) {
+  /* line 653, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog {
+    width: 330px;
+  }
+
+  /* line 656, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog-main {
+    width: 31%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 890px) {
+  /* line 663, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog {
+    width: 300px;
+  }
+
+  /* line 666, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .contacts {
+    padding-left: 25%;
+  }
+}
+@media screen and (max-width: 810px) {
+  /* line 672, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog-main {
+    width: 30%;
+    margin: 10px;
+  }
+
+  /* line 676, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog {
+    width: 270px;
+  }
+
+  /* line 679, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .desc {
+    width: 60%;
+    margin: 10px auto;
+  }
+
+  /* line 683, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .img {
+    max-width: 30%;
+    margin: 10px auto;
+  }
+
+  /* line 687, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .column {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 727px) {
+  /* line 696, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog-main {
+    width: 47%;
+    margin: 10px;
+  }
+
+  /* line 700, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog {
+    width: 90%;
+  }
+
+  /* line 703, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .catalog_nav ul {
+    padding: 10px;
+  }
+
+  /* line 706, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .window {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 713, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .contacts {
+    padding-left: 15%;
+  }
+
+  /* line 717, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .buy {
+    position: fixed;
+    right: 1%;
+    top: 5px;
+    z-index: 20;
+  }
+
+  /* line 723, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .cart-show {
+    width: 95%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 730, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .itemCatalog-main {
+    width: 90%;
+    margin: 10px;
+  }
+
+  /* line 734, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .contacts {
+    padding-left: 0;
+  }
+
+  /* line 738, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .contacts a {
+    font-size: 1.5em;
+  }
+
+  /* line 742, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .horizontal_nav ul li {
+    width: 80px;
+    font-size: 0.9em;
+  }
+
+  /* line 747, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .call-menu {
+    display: block;
+    color: white;
+    float: left;
+    margin: 5px;
+  }
+
+  /* line 754, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .menu_bar {
+    float: none;
+    width: 90%;
+    margin: 5px auto;
+  }
+
+  /* line 760, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .catalog {
+    float: none;
+    width: 95%;
+    margin: 5px auto;
+    padding-left: 7%;
+  }
+
+  /* line 767, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .content {
+    display: block;
+  }
+
+  /* line 771, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .desc {
+    float: none;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* line 777, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .img {
+    float: none;
+    margin: 10px auto;
+    display: table;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* line 785, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .cart-img {
+    /*float: none;*/
+    width: 200px;
+    margin: 10px auto;
+  }
+
+  /* line 791, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .desc-blog {
+    float: none;
+    width: 90%;
+  }
+
+  /* line 796, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .logo {
+    margin-left: 10px;
+  }
+
+  /* line 800, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .slider {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 475px) {
+  /* line 810, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+  .buy a {
+    color: #808080;
+  }
+}
+/* line 815, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.color-cub {
+  position: absolute;
+  left: -25px;
+  bottom: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+/* line 823, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.color {
+  font-size: 1.2em;
+}
+
+/* line 827, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.new_order {
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* line 832, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.field {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* line 837, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.field input {
+  text-align: center;
+  font-size: 1.1em;
+  width: 80%;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+/* line 848, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.field textarea {
+  resize: none;
+  font-size: 1.1em;
+  width: 80%;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin: 10px;
+  overflow: auto;
+}
+
+/* line 860, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.field textarea:focus {
+  outline: none;
+  border: 1px solid #747474;
+  box-shadow: 0 0 10px cornflowerblue;
+}
+
+/* line 866, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.field input:focus {
+  outline: none;
+  border: 1px solid #747474;
+  box-shadow: 0 0 10px cornflowerblue;
+}
+
+/* line 872, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.img-item {
+  width: 60%;
+  margin: 15px auto;
+}
+
+/* line 877, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.width-btn {
+  width: 120px;
+  cursor: pointer;
+}
+
+/* line 882, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+/* line 888, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr {
+  border-bottom: 1px #747474 solid;
+}
+
+/* line 892, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr:first-of-type {
+  background: #dedede;
+  outline: none;
+}
+
+/* line 896, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr th {
+  padding: 15px 10px;
+}
+
+/* line 900, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr td {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+/* line 905, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr td:first-of-type {
+  padding: 15px 10px;
+  text-align: left;
+}
+
+/* line 910, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.table tbody tr th:first-of-type {
+  text-align: left;
+}
+
+/* line 914, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.right {
+  /*display: inline-block;*/
+  /*text-align: right;*/
+  float: right;
+}
+
+/* line 920, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.desc p {
+  margin-bottom: 15px;
+}
+
+/* line 924, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.desc p .right {
+  position: relative;
+}
+
+/* line 928, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.description-cart {
+  width: 100%;
+}
+
+/* line 932, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.quest {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s 0.1s ease;
+}
+
+/* line 940, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.resp {
+  top: -110px;
+  left: -83px;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid #b2b2b2;
+  background: #fff;
+  color: #b2b2b2;
+}
+
+/* line 951, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.resp p {
+  margin: 10px;
+}
+
+/* line 955, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.arrow-bottom {
+  top: -10px;
+  left: -3px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #b2b2b2;
+  border-bottom: 0;
+}
+
+/* line 965, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.hits {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 70px solid transparent;
+  border-left-color: #ebbc08;
+  border-right: 0;
+  border-top: 0;
+}
+
+/* line 977, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.hit {
+  position: absolute;
+  color: #fff;
+  top: 10px;
+  left: -70px;
+  transform: rotate(-45deg);
+}
+
+/* line 984, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.itemCatalog-main {
+  width: 22%;
+}
+
+/* line 988, /home/rodosabc/doskaapp/app/assets/stylesheets/style.scss */
+.catalog-main {
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ *= require_style
+ */
