@@ -266,6 +266,7 @@ img{
 }
 
 .itemCatalog {
+  position: relative;
   display: inline-block;
   margin: 1%;
   font-size: 1.4em;
@@ -697,7 +698,10 @@ img{
     top: 5px;
     z-index: 20;
   }
-
+  .cart-show {
+    width: 95%;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -935,4 +939,28 @@ img{
     border: 10px solid transparent;
     border-top-color: #b2b2b2;
     border-bottom: 0;
+}
+.hits {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-left-color: #ebbc08;
+    border-right: 0;
+    border-top: 0;
+}
+
+.hit {
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    left: -70px;
+    transform: rotate(-45deg);
+}
+.itemCatalog-main {
+    width: 20%;
+}.catalog-main {
+    width: 100%;
 }

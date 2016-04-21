@@ -3,12 +3,20 @@
     <%@products.each do |product|%>
         <div class="itemCatalog">
           <%if product.hit%>
-          <div class="labelsBlock">
-            <div class="label labelTOP" title="Хит продаж">
-              Хит продаж
-            </div>
-          </div>
-              <%end%>
+              <div class="hits">
+                 <span class="hit">ХИТ</span>
+              </div>
+          <%end%>
+          <%if product.sale%>
+              <div class="hits" >
+                <span class="hit" style="left:-75px">SALE</span>
+              </div>
+          <%end%>
+          <%if product.novelty%>
+              <div class="hits">
+                <span class="hit">NEW</span>
+              </div>
+          <%end%>
           <div class="description">
             <%=image_tag(image_url(product.image))%>
             <p title="<%=product.title%>"><%=truncate(product.title,:length => 20) %></p>

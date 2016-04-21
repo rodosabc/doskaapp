@@ -4,6 +4,10 @@
   </div>
   <div>
     <h3><%=@product.title %></h3>
+     <span class="rub price">
+       <%=@product.sizes.minimum(:price) || @product.price %>
+       <i class="fa fa-rub"></i>
+     </span>
     <%= form_tag(line_items_url(:id => @product.id),:method => "post") do %>
       <p>Цвет:</p>
       <div class="radio_buttons">
@@ -17,7 +21,7 @@
       </div>
         <p>Материал:</p>
         <div class="radio_buttons">
-          <%@product.materials.each do |material|%>
+          <%@product.materials.order(:overpay).each do |material|%>
               <div>
                 <%= radio_button_tag(:material, material.id,true) %>
 
@@ -27,7 +31,7 @@
         </div>
         <p>Размер <span class="quest"><i class="fa fa-question-circle"></i></span>: </p>
         <div class="radio_buttons">
-          <%@product.sizes.each do |size|%>
+          <%@product.sizes.order(:price).each do |size|%>
               <div>
                 <%= radio_button_tag(:size, size.size,true) %>
 

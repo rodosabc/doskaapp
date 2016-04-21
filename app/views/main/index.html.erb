@@ -1,16 +1,26 @@
 <%= render 'common/slider'%>
 <div class="row">
   <div class="content">
-    <div class="catalog">
+    <div class="catalog catalog-main">
       <%if @hit_products != nil%>
         <%@hit_products.each do |product|%>
-            <div class="itemCatalog">
+            <div class="itemCatalog itemCatalog-main">
               <!---->
-              <div class="labelsBlock">
-                <div class="label labelTOP" title="Хит продаж">
-                  Хит продаж
-                </div>
-              </div>
+              <%if product.hit%>
+                  <div class="hits">
+                    <span class="hit">ХИТ</span>
+                  </div>
+              <%end%>
+              <%if product.sale%>
+                  <div class="hits">
+                    <span class="hit">РАПРОДАЖА</span>
+                  </div>
+              <%end%>
+              <%if product.novelty%>
+                  <div class="hits">
+                    <span class="hit">НОВИНКА</span>
+                  </div>
+              <%end%>
               <!---->
               <div class="description">
                 <%=image_tag(image_url(product.image))%>

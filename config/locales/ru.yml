@@ -44,7 +44,11 @@ ru:
             few: Размеры
             many: Размеры
             other: Размеры
-
+          line_item:
+            one: Товарная позиция
+            few: Товарные позиции
+            many: Товарные позиции
+            other: Товарные позиции
         attributes:
           cart:
             products: Товары
@@ -58,24 +62,58 @@ ru:
             created_at: Создано
             updated_at: Обновлено
           color:
-             color: Цвет
-             title: Название
+            color: Цвет
+            title: Название
+            created_at: Создано
+            updated_at: Обновлено
+          material:
+            name: Название
+            overpay: Доплата
+            products: Продукты
+            created_at: Создано
+            updated_at: Обновлено
+          size:
+            size: Размер
+            price: Цена
+            products: Продукты
+            created_at: Создано
+            updated_at: Обновлено
           product:
             title: Название
             description: Описание
             price: Цена
+            hit: Хит
+            novelty: Новинка
+            sale: Распродажа
             image: Изображение
-            material: Материалы
-            size: Размеры
+            materials: Материалы
+            sizes: Размеры
             categories: Категории
             colors: Цвета
+            line_items: Товарные позиции
+            carts: Корзины
             created_at: Создано
             updated_at: Обновлено
           order:
             name: Имя
+            second_name: Фамилия
+            comment: Комментарии к заказу
             email: Электронная почта
             phone_number: Номер телефона
             line_items: Товарные позиции
+            created_at: Создано
+            updated_at: Обновлено
+          line_item:
+            cart: Корзина
+            product: Товар
+            order: Заказ
+            color: Цвет
+            color_name: Название цвета
+            material_name: Материал
+            material_overpay: Переплата за материал
+            size_price: Цена за размер
+            size: Размер
+            final_price: Итоговая цена
             created_at: Создано
             updated_at: Обновлено
 
