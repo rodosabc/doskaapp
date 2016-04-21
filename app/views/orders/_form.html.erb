@@ -3,23 +3,23 @@
 
   <div class="field">
     <%= f.label :name, 'Имя'%><span style="color: red">*</span><br>
-    <%= f.text_field :name, class: 'error' %>
+    <%= f.text_field :name, class: 'error', placeholder: 'Иван'%>
   </div>
     <div class="field">
     <%= f.label :second_name, 'Фамилия'%><span style="color: red">*</span><br>
-    <%= f.text_field :second_name, class: 'error' %>
+    <%= f.text_field :second_name, class: 'error', placeholder: 'Иванов' %>
   </div>
   <div class="field">
     <%= f.label :email %><span style="color: red">*</span><br>
-    <%= f.text_field :email, class: 'error' %>
+    <%= f.text_field :email, class: 'error', placeholder: 'example@mail.com' %>
   </div>
   <div class="field">
     <%= f.label :phone_number %><span style="color: red">*</span><br>
-    <%= f.text_field :phone_number, class: 'error' %>
+    <%= f.text_field :phone_number, class: 'error', placeholder: '89451234567' %>
   </div>
     <div class="field">
     <%= f.label :comment, 'Комментариии к заказу' %><br>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment , placeholder: 'Ваши комментарии'%>
   </div>
     <h2 class="head">Содержание заказа</h2>
     <table class="table">
