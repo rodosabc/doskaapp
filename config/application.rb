@@ -25,5 +25,6 @@ module Doskaapp
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     # add custom validators path
 
+
   end
 end
