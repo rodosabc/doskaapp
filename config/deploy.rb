@@ -20,7 +20,9 @@ role :web, "chromium.locum.ru"                          # Your HTTP server, Apac
 role :app, "chromium.locum.ru"                          # This may be the same as your `Web` server
 role :db,  "chromium.locum.ru", :primary => true # This is where Rails migrations will run
 
+=begin
 after "deploy:update_code", :copy_database_config
+=end
 
 task :copy_database_config, roles => :app do
   db_config = "#{shared_path}/database.yml"
