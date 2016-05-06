@@ -6,10 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #...
+
+
+
+
+
 Product.delete_all
+Color.delete_all
+Material.delete_all
 Size.delete_all
+Category.delete_all
+Category.create!(category_name: 'Кровати')
+Category.create!(category_name: 'Основания')
+Category.create!(category_name: 'Матрасы')
+Category.create!(category_name: 'Шкафы')
+Category.create!(category_name: 'Комоды')
+Category.create!(category_name: 'Тумбы')
+Category.create!(category_name: 'Столы')
+Category.create!(category_name: 'Стулья')
+Category.create!(category_name: 'Табуретки')
+Category.create!(category_name: 'Банкетки')
 
-#КРОВАТИ НЕ ЗАБУДЬ ОСНОВАНИЯ
+
+#КРОВАТИ
 json = ActiveSupport::JSON.decode(File.read('db/krovati.json'))
 json.each do |a|
 
@@ -20,12 +39,25 @@ json.each do |a|
                   :colors => Color.create(a['Цвета']),
                   :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
                   categories: Category.where(:category_name => 'Кровати'))
-
-
-
 end
-#МАТРАСЫ НЕ ЗАБУДЬ НАМАТРАСНИКИ
-json = ActiveSupport::JSON.decode(File.read('db/krovati.json'))
+
+# ОСНОВАНИЯ
+Product.create!(:title => 'Ортопедическое основание',
+                :price => 0,
+                :sizes => Size.create([{size: '90x200',price: 3080},
+                                       {size: '120x200',price: 3410},
+                                       {size: '140x200',price: 3740},
+                                       {size: '160x200',price: 3850},
+                                       {size: '180x200',price: 4400},
+                                       {size: '200x200',price: 4730}]),
+                :materials => Material.create([{name:'Стандартный',overpay:0}]),
+                :colors => Color.create([{color:'ffffff', title:'Белый'}]),
+                :image => File.new("#{Rails.root}/app/assets/images/ортопедическое основание.jpg"),
+                categories: Category.where(:category_name => 'Основания'))
+
+#МАТРАСЫ
+
+json = ActiveSupport::JSON.decode(File.read('db/matraci.json'))
 json.each do |a|
 
   Product.create!(:title => a['Название'],
@@ -34,11 +66,123 @@ json.each do |a|
                   :materials => Material.create(a['Материалы']),
                   :colors => Color.create(a['Цвета']),
                   :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
-                  categories: Category.where(:category_name => 'Кровати'))
-
-
-
+                  categories: Category.where(:category_name => 'Матрасы'))
 end
+
+#НАМАТРАСНИКИ
+
+json = ActiveSupport::JSON.decode(File.read('db/namatrasniki.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Матрасы'))
+end
+
+
+#ШКАФЫ
+json = ActiveSupport::JSON.decode(File.read('db/shkafi.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Шкафы'))
+end
+
+#КОМОДЫ
+json = ActiveSupport::JSON.decode(File.read('db/komodi.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Комоды'))
+end
+#ТУМБЫ
+json = ActiveSupport::JSON.decode(File.read('db/tumbi.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Тумбы'))
+end
+
+
+#СТОЛЫ
+json = ActiveSupport::JSON.decode(File.read('db/stoli.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Столы'))
+end
+
+
+#СТУЛЬЯ
+json = ActiveSupport::JSON.decode(File.read('db/stulya.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Стулья'))
+end
+
+
+#ТАБУРЕТКИ
+json = ActiveSupport::JSON.decode(File.read('db/tabureti.json'))
+json.each do |a|
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Табуретки'))
+end
+
+#БАНКЕТКИ
+json = ActiveSupport::JSON.decode(File.read('db/banketki.json'))
+json.each do |a|
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Банкетки>'))
+end
+
+
+
+
+
+
+
+
+
 =begin
   Product.create!(
       title: 'Кровать ткань белая эмаль',

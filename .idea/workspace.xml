@@ -2,120 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f71f9cdb-15d1-437d-8cac-803cdaa7ece6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/faq_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/contacts/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/faq/index.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/001/medium/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/001/original/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/001/thumb/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/002/medium/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/002/original/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/002/thumb/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/003/medium/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/003/original/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/003/thumb/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/004/medium/4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/004/original/4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/004/thumb/4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/005/medium/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/005/original/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/005/thumb/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/006/medium/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/006/original/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/006/thumb/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/007/medium/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/007/original/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/007/thumb/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/008/medium/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/008/original/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/008/thumb/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/009/medium/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/009/original/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/009/thumb/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/010/medium/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/010/original/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/010/thumb/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/011/medium/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/011/original/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/011/thumb/11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/012/medium/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/012/original/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/012/thumb/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/013/medium/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/013/original/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/013/thumb/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/014/medium/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/014/original/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/014/thumb/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/015/medium/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/015/original/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/015/thumb/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/016/medium/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/016/original/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/016/thumb/16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/017/medium/17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/017/original/17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/017/thumb/17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/018/medium/18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/018/original/18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/018/thumb/18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/019/medium/19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/019/original/19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/019/thumb/19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/020/medium/20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/020/original/20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/020/thumb/20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/021/medium/21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/021/original/21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/021/thumb/21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/022/medium/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/022/original/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/022/thumb/22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/023/medium/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/023/original/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/023/thumb/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/024/medium/24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/024/original/24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/024/thumb/24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/025/medium/25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/025/original/25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/products/images/000/000/025/thumb/25.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/color.rb" afterPath="$PROJECT_DIR$/app/models/color.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/material.rb" afterPath="$PROJECT_DIR$/app/models/material.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/size.rb" afterPath="$PROJECT_DIR$/app/models/size.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_slider.html.erb" afterPath="$PROJECT_DIR$/app/views/common/_slider.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/krovati.json" afterPath="$PROJECT_DIR$/db/krovati.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/matraci.json" afterPath="$PROJECT_DIR$/db/matraci.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="doskaapp.iws" />
@@ -227,8 +116,18 @@
       <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4791">
+              <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -247,8 +146,18 @@
       <file leaf-file-name="material.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/material.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="90">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="77" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -347,8 +256,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contacts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/color.rb" />
-        <option value="$PROJECT_DIR$/app/models/material.rb" />
         <option value="$PROJECT_DIR$/app/models/size.rb" />
+        <option value="$PROJECT_DIR$/app/models/material.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
@@ -359,7 +268,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
+    <option name="x" value="-1" />
+    <option name="width" value="1368" />
     <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -683,20 +593,20 @@
       <workItem from="1462184001913" duration="1973000" />
       <workItem from="1462186626072" duration="22586000" />
       <workItem from="1462401516673" duration="8007000" />
-      <workItem from="1462448720238" duration="3816000" />
+      <workItem from="1462448720238" duration="15378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36382000" />
+    <option name="totallyTimeSpent" value="47944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="743" extended-state="0" />
+    <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25265554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23863636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13734567" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14506173" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4398827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -802,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="77" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,13 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1077,10 +973,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/color.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4791">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="77" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/size.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1095,32 +1023,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/material.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/size.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding />
         </state>
       </provider>
