@@ -6,6 +6,51 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #...
+Product.delete_all
+Size.delete_all
+
+#КРОВАТИ НЕ ЗАБУДЬ ОСНОВАНИЯ
+json = ActiveSupport::JSON.decode(File.read('db/krovati.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Кровати'))
+
+
+
+end
+#МАТРАСЫ НЕ ЗАБУДЬ НАМАТРАСНИКИ
+json = ActiveSupport::JSON.decode(File.read('db/krovati.json'))
+json.each do |a|
+
+  Product.create!(:title => a['Название'],
+                  :price => 0,
+                  :sizes => Size.create(a['Размеры']),
+                  :materials => Material.create(a['Материалы']),
+                  :colors => Color.create(a['Цвета']),
+                  :image => File.new("#{Rails.root}/app/assets/images/#{a['Название']}.jpg"),
+                  categories: Category.where(:category_name => 'Кровати'))
+
+
+
+end
+=begin
+  Product.create!(
+      title: 'Кровать ткань белая эмаль',
+      :image => File.new("#{Rails.root}/app/assets/images/1.jpg"),
+      price:3000,
+      hit:true,
+      categories: Category.where(:category_name => 'Кровати'),
+      colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
+      materials: Material.where(:name => ['Стандартный','Стандартный','Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
+      sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
+=end
+=begin
 Category.delete_all
 Category.create!(category_name: 'Кровати')
 Category.create!(category_name: 'Столы')
@@ -270,4 +315,5 @@ Product.create!(
     colors: Color.where(:title => ['Клубничная каша','Зловещий','Космос','Режущий','Пустыня']),
     materials: Material.where(:name => ['Стандартный','Берёза','Дуб','Ясень','Тополь','Пальма','Тёмное дерево','Тёмная материя']),
     sizes: Size.where(:size => ['1x2','2x3','3x4','4x3','5x3','5x4','10x10']))
+=end
 

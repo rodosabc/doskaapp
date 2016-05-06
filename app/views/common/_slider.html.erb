@@ -2,10 +2,13 @@
   <div class="row">
     <div class="slider">
       <ul class="slides">
-        <%@random_ids.each do |random_id|%>
-          <li class="slide"><%=image_tag(image_url(Product.find(random_id).image))%></li>
-        <%end%>
+          <li class="slide"><%=image_tag(asset_url('slider1'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider2'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider3'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider4'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider5'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider6'))%></li>
+          <li class="slide"><%=image_tag(image_url('slider7'))%></li>
       </ul>
     </div>
   </div>
-
