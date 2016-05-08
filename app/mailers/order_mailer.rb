@@ -1,6 +1,5 @@
 class OrderMailer < ApplicationMailer
-  default from: 'notifications@example.com'
-  default to: 'rodosabc@gmail.com'
+  default from: 'svoyadoskateam@svoyadoska.ru'
   def order_email(order)
     @order = order
     @line_items = order.line_items

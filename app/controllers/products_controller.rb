@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
     @products = @category.products
+    @products = @products.paginate(:page => params[:page], :per_page => 12)
   end
 
   def create

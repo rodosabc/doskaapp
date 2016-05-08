@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :orders
   resources :blog_items
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/t98pnr66vn', as: 'rails_admin'
   resources :categories do
     resources :products
   end

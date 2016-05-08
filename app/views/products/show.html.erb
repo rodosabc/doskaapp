@@ -13,13 +13,15 @@
        <span class="final_overpay" style="color: #b2b2b2"></span>
      </span>
     <%= form_tag(line_items_url(:id => @product.id),:method => "post") do %>
-      <p>Цвет:</p>
+      <p>Цвет: <span class="colorname"><%=@product.colors.first.title%></span></p>
       <div class="radio_buttons">
-        <%@product.colors.each do |color|%>
+
+          <%@product.colors.each do |color|%>
+
             <div>
               <%= radio_button_tag(:color, color.color,(color == @product.colors.first)) %>
 
-              <label for="<%='color_'.concat(color.color)%>" style="background: <%='#'.concat(color.color)%>; padding: 20px"></label>
+              <label for="<%='color_'.concat(color.color)%>" colorname="<%=color.title%>" style="background: <%='#'.concat(color.color)%>; padding: 20px" ></label>
             </div>
         <%end%>
       </div>

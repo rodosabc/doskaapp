@@ -35,6 +35,7 @@ gem 'rails_12factor'
 gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', '~> 4.3.5'
 gem 'jquery-minicolors-rails'
+gem 'will_paginate', '~> 3.1.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

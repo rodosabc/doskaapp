@@ -131,4 +131,9 @@ $(document).on('click', 'label', function(event) {
         overprice.empty()
         overprice.append($(this).attr("price"));
     }
+    else if($(this).attr('colorname')){
+        var colorname = $('.colorname');
+        colorname.empty()
+        colorname.append($(this).attr("colorname"));
+    }
 });
