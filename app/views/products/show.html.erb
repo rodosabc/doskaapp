@@ -15,15 +15,16 @@
     <%= form_tag(line_items_url(:id => @product.id),:method => "post") do %>
       <p>Цвет: <span class="colorname"><%=@product.colors.first.title%></span></p>
       <div class="radio_buttons">
-
-          <%@product.colors.each do |color|%>
+          <% @iterator = 0%>
+          <%@product.colors.reverse.each do |color|%>
 
             <div>
-              <%= radio_button_tag(:color, color.color,(color == @product.colors.first)) %>
+              <%= radio_button_tag(:color, @iterator.to_s,(color == @product.colors.last)) %>
 
-              <label for="<%='color_'.concat(color.color)%>" colorname="<%=color.title%>" style="background: <%='#'.concat(color.color)%>; padding: 20px" ></label>
+              <label for="<%='color_'.concat(@iterator.to_s)%>" colorname="<%=color.title%>" style="background-image: url(<%=color.image.url%>); padding: 20px" ></label>
             </div>
-        <%end%>
+            <% @iterator = @iterator + 1%>
+          <%end%>
       </div>
         <p>Материал:</p>
         <div class="radio_buttons">
