@@ -1,6 +1,10 @@
 
 <div class="catalog">
-    <%@products.each do |product|%>
+  <div style="padding-top: 20px; padding-bottom: 10px;">
+    <%if @products.size > 1%>
+      Сортировать цены: <a href="<%= products_path(:sort => 'up', :category_id => @category.id)%>" style="color: #66cc00">по возрастанию <i class="fa fa-angle-up" aria-hidden="true"></i></a> / <a href="<%= products_path(:sort => 'down',:category_id => @category.id)%>" style="color: #66cc00">по убыванию <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+    <%end%>
+        <%@products.each do |product|%>
         <div class="itemCatalog">
           <%if product.hit%>
               <div class="hits">

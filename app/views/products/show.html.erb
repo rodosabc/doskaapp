@@ -4,6 +4,11 @@
   </div>
   <div>
     <h3><%=@product.title %></h3>
+    <% if @product.categories.include?(Category.find_by_category_name('Матрасы'))%>
+      <div class="descript">
+        <%=@product.description.html_safe%>
+      </div>
+    <%end%>
      <span class="rub price">
        <span class="final_price">
           <%=@product.sizes.minimum(:price) || @product.price %>
@@ -19,9 +24,9 @@
           <%@product.colors.reverse.each do |color|%>
 
             <div>
-              <%= radio_button_tag(:color, @iterator.to_s,(color == @product.colors.last)) %>
+              <%= radio_button_tag(:color, color.id,(color == @product.colors.last)) %>
 
-              <label for="<%='color_'.concat(@iterator.to_s)%>" colorname="<%=color.title%>" style="background-image: url(<%=color.image.url%>); padding: 20px" ></label>
+              <label for="<%='color_'.concat(color.id.to_s)%>" colorname="<%=color.title%>" style="background-image: url(<%=color.image.url%>); padding: 20px" ></label>
             </div>
             <% @iterator = @iterator + 1%>
           <%end%>
@@ -36,7 +41,7 @@
               </div>
           <%end%>
         </div>
-        <p>Размер <span class="quest"><i class="fa fa-question-circle"></i></span>: </p>
+        <p>Размер <span class="quest"><i class="fa fa-question-circle" style="font-size: 1.2em"></i></span>: </p>
         <div class="radio_buttons">
           <%@product.sizes.order(:price).each do |size|%>
               <div>

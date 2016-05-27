@@ -20,8 +20,8 @@
                   </div>
                   <div class="desc">
                     <p><%= @product.title %></p>
-                    <%if line_item.color != nil%>
-                        <p class="color">Цвет: <span class="right"><%=line_item.color_name%> <span class="color-cub" style="background: <%='#'.concat(line_item.color)%>"></span> </span></p>
+                    <%if line_item.color_name != nil%>
+                        <p class="color">Цвет: <span class="right"><%=line_item.color_name%> <span class="color-cub" style="background-image: url(<%=Color.find_by_title(line_item.color_name).image.url%>)"></span></span> </p>
                     <%end%>
                     <%if line_item.material_name != nil%>
 

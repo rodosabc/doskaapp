@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
   def index
     @category = Category.find(params[:category_id])
     @products = @category.products
+    if(params[:sort] == 'down')
+      @products = @products.order(price: :desc)
+    else
+      @products = @products.order(price: :asc)
+      end
     @products = @products.paginate(:page => params[:page], :per_page => 12)
   end
 
@@ -31,7 +36,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:title,:description,:image,:price,:hit)
+    params.require(:product).permit(:title,:description,:image,:price,:hit,:sort,:category_id)
   end
 
   def all_products

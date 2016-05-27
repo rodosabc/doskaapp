@@ -6,11 +6,10 @@ class LineItemsController < ApplicationController
 
   def create
     product = Product.find(params[:id])
-    color = Color.find_by_color(params[:color])
+    color = Color.find(params[:color])
     size = Size.find_by_size(params[:size])
     material = Material.find(params[:material])
     @line_item = @cart.add_product(product.id)
-    @line_item.color = color.color
     @line_item.color_name = color.title
     @line_item.size = size.size
     @line_item.size_price = size.price
